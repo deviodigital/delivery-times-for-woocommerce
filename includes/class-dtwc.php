@@ -117,6 +117,11 @@ class DTWC {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-dtwc-admin.php';
 
 		/**
+		 * The file responsible for defining the WooCommerce checkout.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-woocommerce-checkout.php';
+
+		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
