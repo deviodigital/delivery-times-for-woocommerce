@@ -17,6 +17,32 @@
  */
 function dtwc_delivery_info_checkout_fields( $checkout ) {
 
+    /**
+     * @todo set open_time, close_time, +30 minutes, etc via settings options.
+     */
+
+    // Set variables.
+    $open_time  = strtotime( '11:00' ); // @todo add Setting for this in the backend
+    $close_time = strtotime( '23:00' ); // @todo add Setting for this in the backend
+
+    // Create delivery time.
+    $delivery_time = $open_time;
+
+    // Round to next 30 minutes (30 * 60 seconds)
+    $delivery_time = ceil( $delivery_time / ( 30 * 60 ) ) * ( 30 * 60 );
+
+    // Create times array with default option.
+    $times = array( '' => __( 'Select a desired time for delivery', 'dtwc' ) );
+
+    // Loop through and add delivery times based on open/close times.
+    while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
+        // Add time to array.
+        $times[date( 'H:i', $delivery_time )] = date( 'g:i a', $delivery_time );
+
+        // Update delivery time variable.
+        $delivery_time = strtotime( '+30 minutes', $delivery_time );
+    }
+
     // Create Delivery date field.
     woocommerce_form_field( 'dtwc_delivery_date', array(
         'type'     => 'text',
@@ -31,13 +57,7 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
         'class'    => array( 'dtwc_delivery_time form-row-wide' ),
         'label'    => __( 'Delivery time', 'dtwc' ),
         'required' => true,
-        'options'  => array(
-            ''         => 'Select a time',
-            '9am-12pm' => '9am - 12pm',
-            '12pm-3pm' => '12pm - 3pm',
-            '3pm-6pm'  => '3pm - 6pm',
-            '6pm-9pm'  => '6pm - 9pm',
-        )
+        'options'  => $times
     ), $checkout->get_value( 'dtwc_delivery_time' ) );
 
 }
