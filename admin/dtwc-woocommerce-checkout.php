@@ -125,6 +125,9 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
     // Get the delivery time.
     $delivery_time = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
+    // Create readable delivery time.
+    $delivery_time = date( 'g:i a', strtotime( $delivery_time ) );
+
     // Display delivery time.
     if ( '' != $delivery_time ) {
         $fields[ 'Delivery time' ] = array(
@@ -159,7 +162,10 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
     // Get the delivery time.
     $delivery_time = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
-    // Display the delivery date.
+    // Create readable delivery time.
+    $delivery_time = date( 'g:i a', strtotime( $delivery_time ) );
+
+    // Display the delivery date & time.
     if ( '' != $delivery_date ) {
         echo '<p><strong>' . __( 'Delivery date', 'dtwc' ) . ':</strong> ' . $delivery_date . ' @ ' . $delivery_time . '</p>';
 	}
