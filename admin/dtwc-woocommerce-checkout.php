@@ -32,8 +32,8 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
 
     // Loop through and add delivery times based on open/close times.
     while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
-        $current_time = date( 'g:i', time() );
-        $prep_time    = date( 'H:i', strtotime(  dtwc_delivery_prep_time() . ' hour' ) );
+        // Create variable for prep time.
+        $prep_time = date( 'H:i', strtotime(  dtwc_delivery_prep_time() . ' hour' ) );
 
         // Remove times based on prep time setting.
         if ( NULL != dtwc_delivery_prep_time() && '' != dtwc_delivery_prep_time() && $prep_time > date( 'H:i', $delivery_time ) ) {
