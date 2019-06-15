@@ -79,7 +79,14 @@ class DTWC_Public {
 		if ( is_checkout() ) {
 			// Load the datepicker script.
 			wp_enqueue_script( 'jquery-ui-datepicker' );
+			// Load the main scripts.
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dtwc-public.js', array( 'jquery' ), $this->version, false );
+			// Create options for js file.
+			$translation_array = array(
+				'maxDays'      => dtwc_business_delivery_preorder_days(),
+				'deliveryDays' => $day_num,
+			);
+			wp_localize_script( $this->plugin_name, 'dtwc_settings', $translation_array );
 		}
 
 	}
