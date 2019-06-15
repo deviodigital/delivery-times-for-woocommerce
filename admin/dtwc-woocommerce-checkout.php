@@ -17,10 +17,6 @@
  */
 function dtwc_delivery_info_checkout_fields( $checkout ) {
 
-    /**
-     * @todo set open_time, close_time, +30 minutes, etc via settings options.
-     */
-
     // Set variables.
     $open_time  = strtotime( dtwc_business_opening_time() );
     $close_time = strtotime( dtwc_business_closing_time() );
@@ -36,8 +32,16 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
 
     // Loop through and add delivery times based on open/close times.
     while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
-        // Add time to array.
-        $times[date( 'H:i', $delivery_time )] = date( 'g:i a', $delivery_time );
+        $current_time = date( 'g:i', time() );
+        $prep_time    = date( 'H:i', strtotime(  dtwc_delivery_prep_time() . ' hour' ) );
+
+        // Remove times based on prep time setting.
+        if ( NULL != dtwc_delivery_prep_time() && '' != dtwc_delivery_prep_time() && $prep_time > date( 'H:i', $delivery_time ) ) {
+            // Do nothing.
+        } else {
+            // Add time to array.
+            $times[date( 'H:i', $delivery_time )] = date( 'g:i a', $delivery_time );
+        }
 
         // Update delivery time variable.
         $delivery_time = strtotime( '+30 minutes', $delivery_time );
