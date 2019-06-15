@@ -724,8 +724,9 @@ if ( ! class_exists( 'DTWC_ADMIN_SETTINGS' ) ) :
 		// public function admin_menu( $page_title = 'Page Title', $menu_title = 'Menu Title', $capability = 'manage_options', $menu_slug = 'settings_page', $callable = 'plugin_page' ) {
 		public function admin_menu() {
 			// add_options_page( $page_title, $menu_title, $capability, $menu_slug, array( $this, $callable ) );
-			add_options_page(
-				'Delivery Times',
+			add_submenu_page(
+				'woocommerce',
+				'Delivery Times for WooCommerce',
 				'Delivery Times',
 				'manage_options',
 				'dtwc_settings',
@@ -736,6 +737,7 @@ if ( ! class_exists( 'DTWC_ADMIN_SETTINGS' ) ) :
 		public function plugin_page() {
 			echo '<div class="wrap">';
 			echo '<h1>Delivery Times for WooCommerce <span style="font-size:50%;">v' . DTWC_VERSION . '</span></h1>';
+			echo '<p>Brought to you by <a href="https://www.deviodigital.com/" target="_blank">Devio Digital</a>';
 			$this->show_navigation();
 			$this->show_forms();
 			echo '</div>';
