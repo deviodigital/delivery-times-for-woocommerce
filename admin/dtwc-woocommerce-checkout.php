@@ -54,7 +54,7 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     woocommerce_form_field( 'dtwc_delivery_date', array(
         'type'     => 'text',
         'class'    => array( 'dtwc_delivery_date form-row-wide' ),
-        'label'    => __( 'Delivery date', 'dtwc' ),
+        'label'    => dtwc_delivery_date_label(),
         'required' => $require_date,
     ), $checkout->get_value( 'dtwc_delivery_date' ) );
 
@@ -69,7 +69,7 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     woocommerce_form_field( 'dtwc_delivery_time', array(
         'type'     => 'select',
         'class'    => array( 'dtwc_delivery_time form-row-wide' ),
-        'label'    => __( 'Delivery time', 'dtwc' ),
+        'label'    => dtwc_delivery_time_label(),
         'required' => $require_time,
         'options'  => $times
     ), $checkout->get_value( 'dtwc_delivery_time' ) );
