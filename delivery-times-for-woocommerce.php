@@ -73,3 +73,25 @@ function run_dtwc() {
 
 }
 run_dtwc();
+/**
+ * Add a check for our plugin before redirecting
+ */
+function dtwc_activate() {
+    add_option( 'dtwc_do_activation_redirect', true );
+}
+register_activation_hook( __FILE__, 'dtwc_activate' );
+
+/**
+ * Redirect to the Delivery Times for WooCommerce Settings page on single plugin activation
+ * 
+ * @since 1.0
+ */
+function dtwc_redirect() {
+    if ( get_option( 'dtwc_do_activation_redirect', false ) ) {
+        delete_option( 'dtwc_do_activation_redirect' );
+        if ( ! isset( $_GET['activate-multi'] ) ) {
+            wp_redirect( "admin.php?page=dtwc_settings" );
+        }
+    }
+}
+add_action( 'admin_init', 'dtwc_redirect' );
