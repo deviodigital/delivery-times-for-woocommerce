@@ -3,7 +3,7 @@ jQuery(document).ready(function( $ ) {
 	var weekDays = [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ];
 
 	$('#dtwc_delivery_date').datepicker( {
-		minDate: 0,
+		minDate: dtwc_settings.minDate,
 		maxDate: dtwc_settings.maxDays,
 		showAnim: 'fadeIn',
 		dateFormat: 'yy-mm-dd',

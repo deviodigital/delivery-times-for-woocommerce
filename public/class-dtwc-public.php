@@ -111,7 +111,8 @@ class DTWC_Public {
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dtwc-public.js', array( 'jquery' ), $this->version, false );
 			// Create options for js file.
 			$translation_array = array(
-				'maxDays'      => dtwc_business_delivery_preorder_days(),
+				'minDate'      => dtwc_delivery_prep_days(),
+				'maxDays'      => dtwc_delivery_preorder_days(),
 				'deliveryDays' => $day_num,
 			);
 			wp_localize_script( $this->plugin_name, 'dtwc_settings', $translation_array );
