@@ -73,6 +73,24 @@ function run_dtwc() {
 
 }
 run_dtwc();
+
+/**
+ * Add settings link on plugin page
+ *
+ * @since 1.0.3
+ * @param array $links an array of links related to the plugin.
+ * @return array updatead array of links related to the plugin.
+ */
+function dtwc_settings_link( $links ) {
+	$settings_link = '<a href="admin.php?page=dtwc_settings">' . __( 'Settings', 'dtwc' ) . '</a>';
+	array_unshift( $links, $settings_link );
+	return $links;
+}
+
+$pluginname = plugin_basename( __FILE__ );
+
+add_filter( "plugin_action_links_$pluginname", 'dtwc_settings_link' );
+
 /**
  * Add a check for our plugin before redirecting
  */
