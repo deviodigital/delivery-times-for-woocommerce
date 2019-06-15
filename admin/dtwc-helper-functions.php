@@ -104,7 +104,7 @@ function dtwc_require_delivery_date() {
  *
  * @return string|bool
  */
-function dtwc_business_delivery_time_label() {
+function dtwc_delivery_time_label() {
     $basic = get_option( 'dtwc_basic' );
 
     if ( isset( $basic['delivery_tume_label'] ) && '' !== $basic['delivery_time_label'] ) {
@@ -113,7 +113,7 @@ function dtwc_business_delivery_time_label() {
         $delivery_time_label = 'Delivery time';
     }
 
-	return apply_filters( 'dtwc_business_delivery_time_label', $delivery_time_label );
+	return apply_filters( 'dtwc_delivery_time_label', $delivery_time_label );
 }
 
 /**
@@ -138,7 +138,7 @@ function dtwc_require_delivery_time() {
  *
  * @return string|bool
  */
-function dtwc_business_delivery_prep_days() {
+function dtwc_delivery_prep_days() {
     $basic = get_option( 'dtwc_basic' );
 
     if ( isset( $basic['prep_days'] ) && '' !== $basic['prep_days'] ) {
@@ -147,7 +147,7 @@ function dtwc_business_delivery_prep_days() {
         $prep_days = NULL;
     }
 
-	return apply_filters( 'dtwc_business_delivery_prep_days', $prep_days );
+	return apply_filters( 'dtwc_delivery_prep_days', $prep_days );
 }
 
 /**
@@ -155,7 +155,7 @@ function dtwc_business_delivery_prep_days() {
  *
  * @return string|bool
  */
-function dtwc_business_delivery_prep_time() {
+function dtwc_delivery_prep_time() {
     $basic = get_option( 'dtwc_basic' );
 
     if ( isset( $basic['prep_time'] ) && '' !== $basic['prep_time'] ) {
@@ -164,7 +164,7 @@ function dtwc_business_delivery_prep_time() {
         $prep_time = NULL;
     }
 
-	return apply_filters( 'dtwc_business_delivery_prep_time', $prep_time );
+	return apply_filters( 'dtwc_delivery_prep_time', $prep_time );
 }
 
 /**
@@ -172,7 +172,7 @@ function dtwc_business_delivery_prep_time() {
  *
  * @return string|bool
  */
-function dtwc_business_delivery_preorder_days() {
+function dtwc_delivery_preorder_days() {
     $basic = get_option( 'dtwc_basic' );
 
     if ( isset( $basic['preorder_days'] ) && '' !== $basic['preorder_days'] ) {
@@ -181,5 +181,5 @@ function dtwc_business_delivery_preorder_days() {
         $preorder_days = NULL;
     }
 
-	return apply_filters( 'dtwc_business_delivery_preorder_days', $preorder_days );
+	return apply_filters( 'dtwc_delivery_preorder_days', $preorder_days );
 }
