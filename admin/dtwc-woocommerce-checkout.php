@@ -130,8 +130,8 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
 
     // Display delivery date.
     if ( '' != $delivery_date ) {
-        $fields[ 'Delivery date' ] = array(
-            'label' => __( 'Delivery date', 'dtwc' ),
+        $fields[ dtwc_delivery_date_label() ] = array(
+            'label' => dtwc_delivery_date_label(),
             'value' => $delivery_date,
         );
     }
@@ -181,7 +181,7 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
 
     // Display the delivery date & time.
     if ( '' != $delivery_date ) {
-        echo '<p><strong>' . __( 'Delivery date', 'dtwc' ) . ':</strong> ' . $delivery_date . ' @ ' . $delivery_time . '</p>';
+        echo '<p class="dtwc-delivery-date"><strong>' . dtwc_delivery_date_label() . ':</strong> ' . $delivery_date . ' @ ' . $delivery_time . '</p>';
 	}
 }
 //add_filter( 'woocommerce_order_details_before_order_table', 'dtwc_add_delivery_date_to_order_received_page', 10 , 1 );
