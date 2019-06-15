@@ -87,13 +87,21 @@ add_action( 'woocommerce_after_checkout_billing_form', 'dtwc_delivery_info_check
  * @since 1.0
  */
 function dtwc_delivery_date_checkout_field_process() {
+
+    // Create error message.
+    $message = __( 'Please select a delivery date.', 'dtwc' );
+
     // Check if set, if its not set add an error.
     if ( ! $_POST['dtwc_delivery_date'] && 'on' == dtwc_require_delivery_date() ) {
-        wc_add_notice( __( 'Please select a delivery date.', 'dtwc' ), 'error' );
+        wc_add_notice( apply_filters( 'dtwc_delivery_date_error_notice', $message ), 'error' );
     }
+
+    // Create error message.
+    $message = __( 'Please select a delivery time.', 'dtwc' );
+
     // Check if set, if its not set add an error.
     if ( ! $_POST['dtwc_delivery_time'] && 'on' == dtwc_require_delivery_time() ) {
-        wc_add_notice( __( 'Please select a delivery time.', 'dtwc' ), 'error' );
+        wc_add_notice( apply_filters( 'dtwc_delivery_time_error_notice', $message ), 'error' );
     }
 }
 add_action( 'woocommerce_checkout_process', 'dtwc_delivery_date_checkout_field_process' );
