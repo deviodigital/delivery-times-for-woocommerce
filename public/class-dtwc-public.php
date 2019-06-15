@@ -77,6 +77,34 @@ class DTWC_Public {
 	public function enqueue_scripts() {
 
 		if ( is_checkout() ) {
+			$days = dtwc_business_delivery_days();
+
+			$day_num = array();
+			
+			foreach ( $days as $day ) {
+				if ( 'sunday' == $day ) {
+					$day_num['sunday'] = 0;
+				}
+				if ( 'monday' == $day ) {
+					$day_num['monday'] = 1;
+				}
+				if ( 'tuesday' == $day ) {
+					$day_num['tuesday'] = 2;
+				}
+				if ( 'wednesday' == $day ) {
+					$day_num['wednesday'] = 3;
+				}
+				if ( 'thursday' == $day ) {
+					$day_num['thursday'] = 4;
+				}
+				if ( 'friday' == $day ) {
+					$day_num['friday'] = 5;
+				}
+				if ( 'saturday' == $day ) {
+					$day_num['saturday'] = 6;
+				}			
+			}
+			
 			// Load the datepicker script.
 			wp_enqueue_script( 'jquery-ui-datepicker' );
 			// Load the main scripts.
