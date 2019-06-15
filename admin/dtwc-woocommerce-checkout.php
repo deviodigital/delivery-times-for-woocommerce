@@ -22,8 +22,8 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
      */
 
     // Set variables.
-    $open_time  = strtotime( '11:00' ); // @todo add Setting for this in the backend
-    $close_time = strtotime( '23:00' ); // @todo add Setting for this in the backend
+    $open_time  = strtotime( dtwc_business_opening_time() );
+    $close_time = strtotime( dtwc_business_closing_time() );
 
     // Create delivery time.
     $delivery_time = $open_time;
