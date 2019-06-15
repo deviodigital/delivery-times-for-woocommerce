@@ -127,6 +127,11 @@ class DTWC {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-admin-settings.php';
 
 		/**
+		 * The file responsible for the helper functions used throughout the plugin.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-helper-functions.php';
+
+		/**
 		 * The file responsible for defining the WooCommerce checkout.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-woocommerce-checkout.php';
