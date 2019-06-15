@@ -43,12 +43,19 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
         $delivery_time = strtotime( '+30 minutes', $delivery_time );
     }
 
+    // Require date?
+    if ( 'on' == dtwc_require_delivery_date() ) {
+        $require_date = TRUE;
+    } else {
+        $require_date = FALSE;
+    }
+
     // Create Delivery date field.
     woocommerce_form_field( 'dtwc_delivery_date', array(
         'type'     => 'text',
         'class'    => array( 'dtwc_delivery_date form-row-wide' ),
         'label'    => __( 'Delivery date', 'dtwc' ),
-        'required' => true,
+        'required' => $require_date,
     ), $checkout->get_value( 'dtwc_delivery_date' ) );
 
     // Create Delivery time field.
