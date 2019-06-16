@@ -33,6 +33,19 @@ The Delivery Times for WooCommerce plugin comes with settings that help you cust
 * **Opening time** - What time does your business start delivering orders?
 * **Closing time** - What time does your business stop delivering orders?
 
+### Delivery Drivers for WooCommerce
+
+This plugin allows offers better driver management for all delivery services who use WooCommerce, streamlining your workflow and increasing your bottom line.
+
+Learn more at [Delivery Drivers for WooCommerce](https://www.wordpress.org/plugins/delivery-drivers-for-woocommerce)
+
+### Delivery Fees for WooCommerce
+
+Our WooCommerce delivery fees plugin adds a custom shipping method to WooCommerce specifically for delivery services.
+
+Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/delivery-fees-for-woocommerce)
+
+
 == Installation ==
 
 1. In your dashboard, go to `Plugins -> Add New`
