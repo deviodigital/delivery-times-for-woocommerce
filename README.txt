@@ -21,11 +21,12 @@ Allow your customers to choose their desired delivery date and time during check
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Example of the `Delivery Date` & `Delivery Time` fields on checkout.
+2. Date picker with days disabled based on your chosen settings
+3. Time selection displaying 30min intervals based on your opening & closing times in settings
+4. DTWC Settings Basic Settings screen
+5. DTWC Settings Advanced Settings screen
+6. Delivery date & time added to Successful Order details screen
 
 == Changelog ==
 
