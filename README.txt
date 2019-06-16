@@ -45,7 +45,6 @@ Our WooCommerce delivery fees plugin adds a custom shipping method to WooCommerc
 
 Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/delivery-fees-for-woocommerce)
 
-
 == Installation ==
 
 1. In your dashboard, go to `Plugins -> Add New`
