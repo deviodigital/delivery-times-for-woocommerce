@@ -13,6 +13,26 @@ Allow your customers to choose their desired delivery date and time during check
 
 Allow your customers to choose their desired delivery date and time during checkout with WooCommerce
 
+## Admin Settings
+
+The Delivery Times for WooCommerce plugin comes with settings that help you customize what delivery date & time options are available for your customers during checkout.
+
+### Basic Settings
+
+* **Pre-order days** - How many days ahead are customers allowed to place an order?
+* **Delivery days prep** - How many days notice do you require for delivery?
+* **Delivery time prep** - How many hours notice do you require for delivery?
+* **Delivery date label** - The label displayed on checkout page and in order details
+* **Require delivery date** - Check this box to require customers select a delivery date during checkout
+* **Delivery time label** - The label displayed on checkout page and in order details
+* **Require delivery time** - Check this box to require customers select a delivery time during checkout
+
+### Business Hours
+
+* **Delivery days** - Check the box for each day of the week that you offer delivery
+* **Opening time** - What time does your business start delivering orders?
+* **Closing time** - What time does your business stop delivering orders?
+
 == Installation ==
 
 1. In your dashboard, go to `Plugins -> Add New`
