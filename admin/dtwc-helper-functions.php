@@ -144,7 +144,7 @@ function dtwc_delivery_prep_days() {
     if ( isset( $basic['prep_days'] ) && '' !== $basic['prep_days'] ) {
         $prep_days = $basic['prep_days'];
     } else {
-        $prep_days = NULL;
+        $prep_days = 0;
     }
 
 	return apply_filters( 'dtwc_delivery_prep_days', $prep_days );
