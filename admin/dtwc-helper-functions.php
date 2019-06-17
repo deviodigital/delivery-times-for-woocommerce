@@ -107,7 +107,7 @@ function dtwc_require_delivery_date() {
 function dtwc_delivery_time_label() {
     $basic = get_option( 'dtwc_basic' );
 
-    if ( isset( $basic['delivery_tume_label'] ) && '' !== $basic['delivery_time_label'] ) {
+    if ( isset( $basic['delivery_time_label'] ) && '' !== $basic['delivery_time_label'] ) {
         $delivery_time_label = $basic['delivery_time_label'];
     } else {
         $delivery_time_label = 'Delivery time';
