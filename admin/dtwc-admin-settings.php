@@ -181,6 +181,17 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
+	// Array: Delivery days.
+	$delivery_days = array(
+		'sunday'    => __( 'Sunday', 'dtwc' ),
+		'monday'    => __( 'Monday', 'dtwc' ),
+		'tuesday'   => __( 'Tuesday', 'dtwc' ),
+		'wednesday' => __( 'Wednesday', 'dtwc' ),
+		'thursday'  => __( 'Thursday', 'dtwc' ),
+		'friday'    => __( 'Friday', 'dtwc' ),
+		'saturday'  => __( 'Saturday', 'dtwc' ),
+	);
+
 	// Field: Multicheck.
 	$dtwc_obj->add_field(
 		'dtwc_business',
@@ -189,15 +200,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 			'type'    => 'multicheck',
 			'name'    => __( 'Delivery Days', 'dtwc' ),
 			'desc'    => __( 'Select the days of the week that you are open for business', 'dtwc' ),
-			'options' => array(
-				'sunday'    => 'Sunday',
-				'monday'    => 'Monday',
-				'tuesday'   => 'Tuesday',
-				'wednesday' => 'Wednesday',
-				'thursday'  => 'Thursday',
-				'friday'    => 'Friday',
-				'saturday'  => 'Saturday',
-			),
+			'options' => apply_filters( 'dtwc_settings_delivery_days_options', $delivery_days ),
 		)
 	);
 
