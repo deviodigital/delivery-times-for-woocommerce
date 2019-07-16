@@ -208,8 +208,14 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
 
     // Display the delivery details.
     if ( '' != $delivery_date ) {
+        echo do_action( 'dtwc_order_received_delivery_details_before' );
+
+        // Get delivery driver details.
         $delivery_details = '<p class="dtwc-delivery-date"><strong>' . dtwc_delivery_date_label() . ':</strong> ' . $delivery_date . ' @ ' . $delivery_time . '</p>';
+
         echo apply_filters( 'dtwc_order_received_delivery_details', $delivery_details );
+
+        echo do_action( 'dtwc_order_received_delivery_details_after' );
 	}
 }
 //add_filter( 'woocommerce_order_details_before_order_table', 'dtwc_add_delivery_date_to_order_received_page', 10 , 1 );
