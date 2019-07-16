@@ -28,7 +28,7 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     $delivery_time = ceil( $delivery_time / ( 30 * 60 ) ) * ( 30 * 60 );
 
     // Create times array with default option.
-    $times = array( '' => __( 'Select a desired time for delivery', 'dtwc' ) );
+    $times = array( '' => apply_filters( 'dtwc_checkout_delivery_times_select_default_text', __( 'Select a desired time for delivery', 'dtwc' ) ) );
 
     // Loop through and add delivery times based on open/close times.
     while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
