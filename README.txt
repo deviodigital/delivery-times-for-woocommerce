@@ -2,8 +2,8 @@
 Contributors: deviodigital
 Tags: delivery, delivery-times, courier, woocommerce, order-delivery
 Requires at least: 3.0.1
-Tested up to: 5.2.1
-Stable tag: 1.0
+Tested up to: 5.2.2
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,18 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 6. Delivery date & time added to Successful Order details screen
 
 == Changelog ==
+
+= 1.1 =
+* Added `dtwc_checkout_deliter_times_select_default_text` filter in `admin/dtwc-woocommerce-checkout.php`
+* Added `dtwc_order_received_delivery_details` filter in `admin/dtwc-woocommerce-checkout.php`
+* Added `dtwc_settings_delivery_days_options` filter in `admin/dtwc-admin-settings.php`
+* Added `dtwc_order_received_delivery_details_before` action hook in `admin/dtwc-woocommerce-checkout.php`
+* Added `dtwc_order_received_delivery_details_after` action hook in `admin/dtwc-woocommerce-checkout.php`
+* Bugfix misspelling of `delivery_time_label` name in `admin/dtwc-helper-functions.php`
+* Bugfix changed delivery time label text to use helper function in `admin/dtwc-woocommerce-checkout.php`
+* Bugfix prep time check for delivery times options in `admin/dtwc-woocommerce-checkout.php`
+* Updated text strings for localization in `languages/dtwc.pot`
+* General code cleanup throughout multiple files
 
 = 1.0 =
 * Initial release
