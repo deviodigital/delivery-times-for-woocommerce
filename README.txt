@@ -59,6 +59,7 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 4. DTWC Settings Basic Settings screen
 5. DTWC Settings Advanced Settings screen
 6. Delivery date & time added to Successful Order details screen
+7. Delivery date & time added to WooCommerce admin Order details screen
 
 == Changelog ==
 
