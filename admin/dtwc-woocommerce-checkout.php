@@ -195,19 +195,19 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
     }
 
     // Get the delivery date.
-    $delivery_date = get_post_meta( $order_id, 'dtwc_delivery_date', true );
+    $delivery_date_meta = get_post_meta( $order_id, 'dtwc_delivery_date', true );
 
     // Create readable delivery date.
-    $delivery_date = date( 'M j, Y', strtotime( $delivery_date ) );
+    $delivery_date = date( 'M j, Y', strtotime( $delivery_date_meta ) );
 
     // Get the delivery time.
-    $delivery_time = get_post_meta( $order_id, 'dtwc_delivery_time', true );
+    $delivery_time_meta = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
     // Create readable delivery time.
-    $delivery_time = date( 'g:i a', strtotime( $delivery_time ) );
+    $delivery_time = date( 'g:i a', strtotime( $delivery_time_meta ) );
 
     // Display the delivery details.
-    if ( '' != $delivery_date ) {
+    if ( '' != $delivery_date_meta ) {
         echo do_action( 'dtwc_order_received_delivery_details_before' );
 
         // Get delivery driver details.
