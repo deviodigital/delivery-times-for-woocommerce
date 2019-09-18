@@ -132,7 +132,7 @@ class DTWC {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-helper-functions.php';
 
 		/**
-		 * The file responsible for defining the WooCommerce checkout.
+		 * The file responsible for defining the WooCommerce checkout settings.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-woocommerce-checkout.php';
 
@@ -142,6 +142,16 @@ class DTWC {
 		 * @since 1.2
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-woocommerce-settings.php';
+
+		// Check if DDWC is active.
+		if ( function_exists( 'run_ddwc' ) ) {
+			/**
+			 * The file responsible for defining the Delivery Drivers for WooCommerce settings.
+			 * 
+			 * @since 1.2
+			 */
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-ddwc-settings.php';
+		}
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
