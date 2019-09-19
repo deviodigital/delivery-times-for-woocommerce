@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Delivery Times for WooCommerce\n"
-"POT-Creation-Date: 2019-07-16 21:00-0400\n"
-"PO-Revision-Date: 2019-07-16 20:59-0400\n"
+"POT-Creation-Date: 2019-09-19 16:27-0400\n"
+"PO-Revision-Date: 2019-09-19 16:26-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -161,11 +161,11 @@ msgstr ""
 msgid "Select a desired time for delivery"
 msgstr ""
 
-#: admin/dtwc-woocommerce-checkout.php:107
+#: admin/dtwc-woocommerce-checkout.php:104
 msgid "Please select a delivery date."
 msgstr ""
 
-#: admin/dtwc-woocommerce-checkout.php:115
+#: admin/dtwc-woocommerce-checkout.php:112
 msgid "Please select a delivery time."
 msgstr ""
 
@@ -178,7 +178,9 @@ msgid "Delivery Times for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://www.deviodigital.com/delivery-times-for-woocommerce"
+msgid ""
+"https://deviodigital.com/how-to-use-the-delivery-times-for-woocommerce-"
+"plugin/"
 msgstr ""
 
 #. Description of the plugin/theme
