@@ -2,8 +2,8 @@
 Contributors: deviodigital
 Tags: delivery, delivery-times, courier, woocommerce, order-delivery
 Requires at least: 3.0.1
-Tested up to: 5.2.2
-Stable tag: 1.1
+Tested up to: 5.2.3
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,14 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 7. Delivery date & time added to WooCommerce admin Order details screen
 
 == Changelog ==
+
+= 1.2 =
+* Added JavaScript to remove delivery times if selected delivery date is today in `public/js/dtwc-publc.js`
+* Added delivery times details to WooCommerce Edit order screen in `admin/dtwc-woocommerce-settings.php`
+* Added delivery times details to Driver Dashboard order details in `admin/dtwc-ddwc-settings.php`
+* Updated `delivery_date` and `delivery_time` variable names in `admin/dtwc-woocommerce-checkout.php`
+* Updated checkout delivery times to include all times from open to close by default in `admin/dtwc-woocommerce-checkout.php`
+* Updated text strings for localization in `languages/dtwc.pot`
 
 = 1.1 =
 * Added `dtwc_checkout_deliter_times_select_default_text` filter in `admin/dtwc-woocommerce-checkout.php`

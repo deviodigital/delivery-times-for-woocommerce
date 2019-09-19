@@ -70,7 +70,7 @@ class DTWC {
 		if ( defined( 'DTWC_VERSION' ) ) {
 			$this->version = DTWC_VERSION;
 		} else {
-			$this->version = '1.1';
+			$this->version = '1.2';
 		}
 		$this->plugin_name = 'dtwc';
 
