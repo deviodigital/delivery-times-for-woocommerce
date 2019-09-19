@@ -105,15 +105,59 @@ class DTWC_Public {
 				}			
 			}
 			
+			// Delivery prep time.
+			$delivery_prep = dtwc_delivery_prep_time();
+
+			// Set the delivery prep time for the strtotime.
+			if ( '1' == $delivery_prep ) {
+				$strtotime = '+' . $delivery_prep . 'hour';
+			} elseif ( $delivery_prep > 1 ) {
+				$strtotime = '+' . $delivery_prep . 'hours';
+			} else {
+				$strtotime = 'now';
+			}
+
+			// Get the prep time based on the settings in delivery prep.
+			$prep_time = date( 'H:i', strtotime( $strtotime, strtotime( current_time( 'H:i' ) ) ) );
+
+			// Set variables.
+			$open_time  = strtotime( dtwc_business_opening_time() );
+			$close_time = strtotime( dtwc_business_closing_time() );
+
+			// Create delivery time.
+			$delivery_time = $open_time;
+
+			// Round to next 30 minutes (30 * 60 seconds)
+			$delivery_time = ceil( $delivery_time / ( 30 * 60 ) ) * ( 30 * 60 );
+
+			// Times array.
+			$times = array();
+
+			// Loop through and add delivery times based on open/close times.
+			while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
+				// Add delivery time to array of times.
+				$times[] = date( 'H:i', $delivery_time );
+
+				// Update delivery time variable.
+				$delivery_time = strtotime( '+30 minutes', $delivery_time );
+			}
+
+			// Encode the times for JavaScript usage.
+			$times = json_encode( $times );
+			$times = json_decode( $times );
+
 			// Load the datepicker script.
 			wp_enqueue_script( 'jquery-ui-datepicker' );
 			// Load the main scripts.
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dtwc-public.js', array( 'jquery' ), $this->version, false );
+
 			// Create options for js file.
 			$translation_array = array(
-				'minDate'      => dtwc_delivery_prep_days(),
-				'maxDays'      => dtwc_delivery_preorder_days(),
-				'deliveryDays' => $day_num,
+				'minDate'       => dtwc_delivery_prep_days(),
+				'maxDays'       => dtwc_delivery_preorder_days(),
+				'deliveryDays'  => $day_num,
+				'deliveryTimes' => $times,
+				'prepTime'      => $prep_time,
 			);
 			wp_localize_script( $this->plugin_name, 'dtwc_settings', $translation_array );
 		}
