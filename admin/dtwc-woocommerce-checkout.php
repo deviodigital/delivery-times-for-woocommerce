@@ -33,30 +33,27 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     // Loop through and add delivery times based on open/close times.
     while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
 
+        /**
+         * @todo change the date( g:i a ); to be filterable so I can change it via settings from AM/PM to 24hr
+         */
+
         // Delivery prep time.
         $delivery_prep = dtwc_delivery_prep_time();
 
         // Set the delivery prep time for the strtotime.
         if ( '1' == $delivery_prep ) {
             $strtotime = '+' . $delivery_prep . 'hour';
-        } elseif ( $delivery_time > 1 ) {
+        } elseif ( $delivery_prep > 1 ) {
             $strtotime = '+' . $delivery_prep . 'hours';
-        } elseif ( '0' == $delivery_prep ) {
-            $strtotime = 'now';
         } else {
-            $strtotime = '';
+            $strtotime = 'now';
         }
 
         // Get the prep time based on the settings in delivery prep.
         $prep_time = date( 'H:i', strtotime( $strtotime, strtotime( current_time( 'H:i' ) ) ) );
 
-        // Remove times based on prep time setting.
-        if ( NULL != $delivery_prep && '' != $delivery_prep && $prep_time > date( 'H:i', $delivery_time ) ) {
-            // Do nothing.
-        } else {
-            // Add time to array.
-            $times[date( 'H:i', $delivery_time )] = date( 'g:i a', $delivery_time );
-        }
+        // Add delivery time to array of times.
+        $times[date( 'H:i', $delivery_time )] = date( 'g:i a', $delivery_time );
 
         // Update delivery time variable.
         $delivery_time = strtotime( '+30 minutes', $delivery_time );
