@@ -226,5 +226,4 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-
 }

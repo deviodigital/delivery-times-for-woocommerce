@@ -41,7 +41,7 @@ function dtwc_driver_dashboard_order_details_table_tbody_bottom() {
     // Display the delivery details.
     if ( '' != $delivery_date_meta ) {
         // Get delivery driver details.
-        $delivery_times = '<tr><td class="dtwc-delivery-date"><strong>' . dtwc_delivery_date_label() . '</strong></td><td>' . $delivery_date . ' - ' . $delivery_time . '</td></tr>';
+        $delivery_times = '<tr><td class="dtwc-delivery-date">' . dtwc_delivery_date_label() . '</td><td>' . $delivery_date . ' - ' . $delivery_time . '</td></tr>';
 
         echo apply_filters( 'dtwc_driver_dashboard_order_details_table_tbody_bottom', $delivery_times );
     }
