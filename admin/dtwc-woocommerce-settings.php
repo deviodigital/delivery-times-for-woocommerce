@@ -21,13 +21,13 @@ function dtwc_woocommerce_admin_order_data_after_shipping_address( $order ) {
     $delivery_date_meta = get_post_meta( $order_id, 'dtwc_delivery_date', true );
 
     // Create readable delivery date.
-    $delivery_date = date( 'M j, Y', strtotime( $delivery_date_meta ) );
+    $delivery_date = date( apply_filters( 'dtwc_date_format', 'M j, Y' ), strtotime( $delivery_date_meta ) );
 
     // Get the delivery time.
     $delivery_time_meta = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
     // Create readable delivery time.
-    $delivery_time = date( 'g:i a', strtotime( $delivery_time_meta ) );
+    $delivery_time = date( apply_filters( 'dtwc_time_format', 'g:i a' ), strtotime( $delivery_time_meta ) );
 
     // Display the delivery details.
     if ( '' != $delivery_date_meta ) {

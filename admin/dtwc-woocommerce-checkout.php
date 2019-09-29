@@ -33,10 +33,6 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     // Loop through and add delivery times based on open/close times.
     while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
 
-        /**
-         * @todo change the date( g:i a ); to be filterable so I can change it via settings from AM/PM to 24hr
-         */
-
         // Delivery prep time.
         $delivery_prep = dtwc_delivery_prep_time();
 
@@ -53,7 +49,7 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
         $prep_time = date( 'H:i', strtotime( $strtotime, strtotime( current_time( 'H:i' ) ) ) );
 
         // Add delivery time to array of times.
-        $times[date( 'H:i', $delivery_time )] = date( 'g:i a', $delivery_time );
+        $times[date( 'H:i', $delivery_time )] = date( apply_filters( 'dtwc_time_format', 'g:i a' ), $delivery_time );
 
         // Update delivery time variable.
         $delivery_time = strtotime( '+30 minutes', $delivery_time );
@@ -150,7 +146,7 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
     $delivery_date = get_post_meta( $order_id, 'dtwc_delivery_date', true );
 
     // Create readable delivery date.
-    $delivery_date = date( 'M j, Y', strtotime( $delivery_date ) );
+    $delivery_date = date( apply_filters( 'dtwc_date_format', 'M j, Y' ), strtotime( $delivery_date ) );
 
     // Display delivery date.
     if ( '' != $delivery_date ) {
@@ -164,7 +160,7 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
     $delivery_time = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
     // Create readable delivery time.
-    $delivery_time = date( 'g:i a', strtotime( $delivery_time ) );
+    $delivery_time = date( apply_filters( 'dtwc_time_format', 'g:i a' ), strtotime( $delivery_time ) );
 
     // Display delivery time.
     if ( '' != $delivery_time ) {
@@ -195,13 +191,13 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
     $delivery_date_meta = get_post_meta( $order_id, 'dtwc_delivery_date', true );
 
     // Create readable delivery date.
-    $delivery_date = date( 'M j, Y', strtotime( $delivery_date_meta ) );
+    $delivery_date = date( apply_filters( 'dtwc_date_format', 'M j, Y' ), strtotime( $delivery_date_meta ) );
 
     // Get the delivery time.
     $delivery_time_meta = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
     // Create readable delivery time.
-    $delivery_time = date( 'g:i a', strtotime( $delivery_time_meta ) );
+    $delivery_time = date( apply_filters( 'dtwc_time_format', 'g:i a' ), strtotime( $delivery_time_meta ) );
 
     // Display the delivery details.
     if ( '' != $delivery_date_meta ) {
