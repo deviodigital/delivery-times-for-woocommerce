@@ -67,14 +67,14 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 	$dtwc_obj->add_section(
 		array(
 			'id'    => 'dtwc_basic',
-			'title' => __( 'Basic Settings', 'dtwc' ),
+			'title' => esc_attr__( 'Basic Settings', 'dtwc' ),
 		)
 	);
 	// Section: Other Settings.
 	$dtwc_obj->add_section(
 		array(
 			'id'    => 'dtwc_business',
-			'title' => __( 'Business Hours', 'dtwc' ),
+			'title' => esc_attr__( 'Business Hours', 'dtwc' ),
 		)
 	);
 
@@ -84,8 +84,8 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'                => 'preorder_days',
 			'type'              => 'number',
-			'name'              => __( 'Pre-order days', 'dtwc' ),
-			'desc'              => __( 'How many days ahead are customers allowed to place an order? (leave blank for no limit)', 'dtwc' ),
+			'name'              => esc_attr__( 'Pre-order days', 'dtwc' ),
+			'desc'              => esc_attr__( 'How many days ahead are customers allowed to place an order? (leave blank for no limit)', 'dtwc' ),
 			'default'           => '',
 			'sanitize_callback' => 'intval',
 		)
@@ -97,8 +97,8 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'                => 'prep_days',
 			'type'              => 'number',
-			'name'              => __( 'Delivery days prep', 'dtwc' ),
-			'desc'              => __( 'How many days notice do you require for delivery? (leave blank to allow same-day delivery)', 'dtwc' ),
+			'name'              => esc_attr__( 'Delivery days prep', 'dtwc' ),
+			'desc'              => esc_attr__( 'How many days notice do you require for delivery? (leave blank to allow same-day delivery)', 'dtwc' ),
 			'default'           => '',
 			'sanitize_callback' => 'intval',
 		)
@@ -110,8 +110,8 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'                => 'prep_time',
 			'type'              => 'number',
-			'name'              => __( 'Delivery time prep', 'dtwc' ),
-			'desc'              => __( 'How many hours notice do you require for delivery? (useful for same-day delivery)', 'dtwc' ),
+			'name'              => esc_attr__( 'Delivery time prep', 'dtwc' ),
+			'desc'              => esc_attr__( 'How many hours notice do you require for delivery? (useful for same-day delivery)', 'dtwc' ),
 			'default'           => '',
 			'sanitize_callback' => 'intval',
 		)
@@ -132,9 +132,9 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'      => 'delivery_date_label',
 			'type'    => 'text',
-			'name'    => __( 'Delivery date label', 'dtwc' ),
-			'desc'    => __( 'The label displayed on checkout page and in order details', 'dtwc' ),
-			'default' => __( 'Delivery date', 'dtwc' ),
+			'name'    => esc_attr__( 'Delivery date label', 'dtwc' ),
+			'desc'    => esc_attr__( 'The label displayed on checkout page and in order details', 'dtwc' ),
+			'default' => esc_attr__( 'Delivery date', 'dtwc' ),
 		)
 	);
 
@@ -144,8 +144,8 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'   => 'require_delivery_date',
 			'type' => 'checkbox',
-			'name' => __( 'Require delivery date', 'dtwc' ),
-			'desc' => __( 'Check this box to require customers select a delivery date during checkout', 'dtwc' ),
+			'name' => esc_attr__( 'Require delivery date', 'dtwc' ),
+			'desc' => esc_attr__( 'Check this box to require customers select a delivery date during checkout', 'dtwc' ),
 		)
 	);
 
@@ -164,9 +164,9 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'      => 'delivery_time_label',
 			'type'    => 'text',
-			'name'    => __( 'Delivery time label', 'dtwc' ),
-			'desc'    => __( 'The label displayed on checkout page and in order details', 'dtwc' ),
-			'default' => __( 'Delivery time', 'dtwc' ),
+			'name'    => esc_attr__( 'Delivery time label', 'dtwc' ),
+			'desc'    => esc_attr__( 'The label displayed on checkout page and in order details', 'dtwc' ),
+			'default' => esc_attr__( 'Delivery time', 'dtwc' ),
 		)
 	);
 
@@ -176,20 +176,20 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'   => 'require_delivery_time',
 			'type' => 'checkbox',
-			'name' => __( 'Require delivery time', 'dtwc' ),
-			'desc' => __( 'Check this box to require customers select a delivery time during checkout', 'dtwc' ),
+			'name' => esc_attr__( 'Require delivery time', 'dtwc' ),
+			'desc' => esc_attr__( 'Check this box to require customers select a delivery time during checkout', 'dtwc' ),
 		)
 	);
 
 	// Array: Delivery days.
 	$delivery_days = array(
-		'sunday'    => __( 'Sunday', 'dtwc' ),
-		'monday'    => __( 'Monday', 'dtwc' ),
-		'tuesday'   => __( 'Tuesday', 'dtwc' ),
-		'wednesday' => __( 'Wednesday', 'dtwc' ),
-		'thursday'  => __( 'Thursday', 'dtwc' ),
-		'friday'    => __( 'Friday', 'dtwc' ),
-		'saturday'  => __( 'Saturday', 'dtwc' ),
+		'sunday'    => esc_attr__( 'Sunday', 'dtwc' ),
+		'monday'    => esc_attr__( 'Monday', 'dtwc' ),
+		'tuesday'   => esc_attr__( 'Tuesday', 'dtwc' ),
+		'wednesday' => esc_attr__( 'Wednesday', 'dtwc' ),
+		'thursday'  => esc_attr__( 'Thursday', 'dtwc' ),
+		'friday'    => esc_attr__( 'Friday', 'dtwc' ),
+		'saturday'  => esc_attr__( 'Saturday', 'dtwc' ),
 	);
 
 	// Field: Multicheck.
@@ -198,8 +198,8 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'      => 'delivery_days',
 			'type'    => 'multicheck',
-			'name'    => __( 'Delivery Days', 'dtwc' ),
-			'desc'    => __( 'Select the days of the week that you are open for business', 'dtwc' ),
+			'name'    => esc_attr__( 'Delivery Days', 'dtwc' ),
+			'desc'    => esc_attr__( 'Select the days of the week that you are open for business', 'dtwc' ),
 			'options' => apply_filters( 'dtwc_settings_delivery_days_options', $delivery_days ),
 		)
 	);
@@ -210,8 +210,8 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'      => 'opening_time',
 			'type'    => 'time',
-			'name'    => __( 'Opening time', 'dtwc' ),
-			'desc'    => __( 'What time does your business start delivering orders?', 'dtwc' ),
+			'name'    => esc_attr__( 'Opening time', 'dtwc' ),
+			'desc'    => esc_attr__( 'What time does your business start delivering orders?', 'dtwc' ),
 		)
 	);
 
@@ -221,8 +221,8 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		array(
 			'id'      => 'closing_time',
 			'type'    => 'time',
-			'name'    => __( 'Closing time', 'dtwc' ),
-			'desc'    => __( 'What time does your business stop delivering orders?', 'dtwc' ),
+			'name'    => esc_attr__( 'Closing time', 'dtwc' ),
+			'desc'    => esc_attr__( 'What time does your business stop delivering orders?', 'dtwc' ),
 		)
 	);
 
