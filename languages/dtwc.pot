@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Delivery Times for WooCommerce\n"
-"POT-Creation-Date: 2019-09-19 16:27-0400\n"
-"PO-Revision-Date: 2019-09-19 16:26-0400\n"
+"POT-Creation-Date: 2019-11-01 17:41-0400\n"
+"PO-Revision-Date: 2019-11-01 17:37-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -161,11 +161,11 @@ msgstr ""
 msgid "Select a desired time for delivery"
 msgstr ""
 
-#: admin/dtwc-woocommerce-checkout.php:104
+#: admin/dtwc-woocommerce-checkout.php:100
 msgid "Please select a delivery date."
 msgstr ""
 
-#: admin/dtwc-woocommerce-checkout.php:112
+#: admin/dtwc-woocommerce-checkout.php:108
 msgid "Please select a delivery time."
 msgstr ""
 
