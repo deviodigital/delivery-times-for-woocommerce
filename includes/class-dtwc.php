@@ -67,12 +67,12 @@ class DTWC {
 	 * @since    1.0
 	 */
 	public function __construct() {
+		$this->plugin_name = 'dtwc';
+		$this->version     = '1.3';
+
 		if ( defined( 'DTWC_VERSION' ) ) {
 			$this->version = DTWC_VERSION;
-		} else {
-			$this->version = '1.2';
 		}
-		$this->plugin_name = 'dtwc';
 
 		$this->load_dependencies();
 		$this->set_locale();

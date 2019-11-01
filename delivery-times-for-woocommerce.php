@@ -11,7 +11,7 @@
  * Plugin Name:       Delivery Times for WooCommerce
  * Plugin URI:        https://deviodigital.com/how-to-use-the-delivery-times-for-woocommerce-plugin/
  * Description:       Allow your customers to choose their desired delivery date and time during checkout with WooCommerce
- * Version:           1.2
+ * Version:           1.3
  * Author:            Devio Digital
  * Author URI:        https://www.deviodigital.com/
  * License:           GPL-2.0+
@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Current plugin version.
  */
-define( 'DTWC_VERSION', '1.2' );
+define( 'DTWC_VERSION', '1.3' );
 
 /**
  * The code that runs during plugin activation.

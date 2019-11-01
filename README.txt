@@ -2,8 +2,8 @@
 Contributors: deviodigital
 Tags: delivery, delivery-times, courier, woocommerce, order-delivery
 Requires at least: 3.0.1
-Tested up to: 5.2.3
-Stable tag: 1.2
+Tested up to: 5.2.4
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,19 +19,19 @@ The Delivery Times for WooCommerce plugin comes with settings that help you cust
 
 ### Basic Settings
 
-* **Pre-order days** - How many days ahead are customers allowed to place an order?
-* **Delivery days prep** - How many days notice do you require for delivery?
-* **Delivery time prep** - How many hours notice do you require for delivery?
-* **Delivery date label** - The label displayed on checkout page and in order details
-* **Require delivery date** - Check this box to require customers select a delivery date during checkout
-* **Delivery time label** - The label displayed on checkout page and in order details
-* **Require delivery time** - Check this box to require customers select a delivery time during checkout
+*   **Pre-order days** - How many days ahead are customers allowed to place an order?
+*   **Delivery days prep** - How many days notice do you require for delivery?
+*   **Delivery time prep** - How many hours notice do you require for delivery?
+*   **Delivery date label** - The label displayed on checkout page and in order details
+*   **Require delivery date** - Check this box to require customers select a delivery date during checkout
+*   **Delivery time label** - The label displayed on checkout page and in order details
+*   **Require delivery time** - Check this box to require customers select a delivery time during checkout
 
 ### Business Hours
 
-* **Delivery days** - Check the box for each day of the week that you offer delivery
-* **Opening time** - What time does your business start delivering orders?
-* **Closing time** - What time does your business stop delivering orders?
+*   **Delivery days** - Check the box for each day of the week that you offer delivery
+*   **Opening time** - What time does your business start delivering orders?
+*   **Closing time** - What time does your business stop delivering orders?
 
 ### Delivery Drivers for WooCommerce
 
@@ -63,25 +63,37 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 
 == Changelog ==
 
+= 1.3 =
+*   Added `dtwc_date_format` filter in `admin/dtwc-woocommerce-checkout.php`
+*   Added `dtwc_time_format` filter in `admin/dtwc-woocommerce-checkout.php`
+*   Added `dtwc_date_format` filter in `admin/dtwc-woocommerce-settings.php`
+*   Added `dtwc_time_format` filter in `admin/dtwc-woocommerce-settings.php`
+*   Added `dtwc_date_format` filter in `admin/dtwc-ddwc-settings.php`
+*   Added `dtwc_time_format` filter in `admin/dtwc-ddwc-settings.php`
+*   Updated the style for delivery date label in DDWC dashboard with CSS in `public/css/dtwc-public.css`
+*   Updated the style for delivery date label in DDWC dashboard with CSS in `admin/dtwc-ddwc-settings.css`
+*   Updated text strings for localization in `languages/dtwc.pot`
+*   General code cleanup throughout multiple files
+
 = 1.2 =
-* Added JavaScript to remove delivery times if selected delivery date is today in `public/js/dtwc-publc.js`
-* Added delivery times details to WooCommerce Edit order screen in `admin/dtwc-woocommerce-settings.php`
-* Added delivery times details to Driver Dashboard order details in `admin/dtwc-ddwc-settings.php`
-* Updated `delivery_date` and `delivery_time` variable names in `admin/dtwc-woocommerce-checkout.php`
-* Updated checkout delivery times to include all times from open to close by default in `admin/dtwc-woocommerce-checkout.php`
-* Updated text strings for localization in `languages/dtwc.pot`
+*   Added JavaScript to remove delivery times if selected delivery date is today in `public/js/dtwc-publc.js`
+*   Added delivery times details to WooCommerce Edit order screen in `admin/dtwc-woocommerce-settings.php`
+*   Added delivery times details to Driver Dashboard order details in `admin/dtwc-ddwc-settings.php`
+*   Updated `delivery_date` and `delivery_time` variable names in `admin/dtwc-woocommerce-checkout.php`
+*   Updated checkout delivery times to include all times from open to close by default in `admin/dtwc-woocommerce-checkout.php`
+*   Updated text strings for localization in `languages/dtwc.pot`
 
 = 1.1 =
-* Added `dtwc_checkout_deliter_times_select_default_text` filter in `admin/dtwc-woocommerce-checkout.php`
-* Added `dtwc_order_received_delivery_details` filter in `admin/dtwc-woocommerce-checkout.php`
-* Added `dtwc_settings_delivery_days_options` filter in `admin/dtwc-admin-settings.php`
-* Added `dtwc_order_received_delivery_details_before` action hook in `admin/dtwc-woocommerce-checkout.php`
-* Added `dtwc_order_received_delivery_details_after` action hook in `admin/dtwc-woocommerce-checkout.php`
-* Bugfix misspelling of `delivery_time_label` name in `admin/dtwc-helper-functions.php`
-* Bugfix changed delivery time label text to use helper function in `admin/dtwc-woocommerce-checkout.php`
-* Bugfix prep time check for delivery times options in `admin/dtwc-woocommerce-checkout.php`
-* Updated text strings for localization in `languages/dtwc.pot`
-* General code cleanup throughout multiple files
+*   Added `dtwc_checkout_deliter_times_select_default_text` filter in `admin/dtwc-woocommerce-checkout.php`
+*   Added `dtwc_order_received_delivery_details` filter in `admin/dtwc-woocommerce-checkout.php`
+*   Added `dtwc_settings_delivery_days_options` filter in `admin/dtwc-admin-settings.php`
+*   Added `dtwc_order_received_delivery_details_before` action hook in `admin/dtwc-woocommerce-checkout.php`
+*   Added `dtwc_order_received_delivery_details_after` action hook in `admin/dtwc-woocommerce-checkout.php`
+*   Bugfix misspelling of `delivery_time_label` name in `admin/dtwc-helper-functions.php`
+*   Bugfix changed delivery time label text to use helper function in `admin/dtwc-woocommerce-checkout.php`
+*   Bugfix prep time check for delivery times options in `admin/dtwc-woocommerce-checkout.php`
+*   Updated text strings for localization in `languages/dtwc.pot`
+*   General code cleanup throughout multiple files
 
 = 1.0 =
-* Initial release
+*   Initial release
