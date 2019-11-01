@@ -30,13 +30,13 @@ function dtwc_driver_dashboard_order_details_table_tbody_bottom() {
     $delivery_date_meta = get_post_meta( $order_id, 'dtwc_delivery_date', true );
 
     // Create readable delivery date.
-    $delivery_date = date( 'm-j-y', strtotime( $delivery_date_meta ) );
+    $delivery_date = date( apply_filters( 'dtwc_date_format', 'm-j-y' ), strtotime( $delivery_date_meta ) );
 
     // Get the delivery time.
     $delivery_time_meta = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
     // Create readable delivery time.
-    $delivery_time = date( 'h:i a', strtotime( $delivery_time_meta ) );
+    $delivery_time = date( apply_filters( 'dtwc_time_format', 'h:i a' ), strtotime( $delivery_time_meta ) );
 
     // Display the delivery details.
     if ( '' != $delivery_date_meta ) {
