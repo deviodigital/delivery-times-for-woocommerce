@@ -13,7 +13,7 @@
 /**
  * Add delivery time to admin order data
  */
-function dtwc_woocommerce_admin_order_data_after_shipping_address( $order ) {
+function dtwc_woocommerce_admin_order_data_after_address( $order ) {
     // Order ID.
     $order_id = $order->get_id();
 
@@ -37,4 +37,19 @@ function dtwc_woocommerce_admin_order_data_after_shipping_address( $order ) {
         echo apply_filters( 'dtwc_admin_order_received_delivery_details', $delivery_details );
     }
 }
-add_action( 'woocommerce_admin_order_data_after_shipping_address', 'dtwc_woocommerce_admin_order_data_after_shipping_address', 10, 1 );
+
+/**
+ * Run specific codes on WooCommerce init
+ * 
+ * @since 1.2
+ * @return void
+ */
+function dtwc_woocommerce_init() {
+    $after_address = dtwc_delivery_time_edit_order_display();
+    if ( 'billing' == $after_adress ) {
+        add_action( 'woocommerce_admin_order_data_after_billing_address', 'dtwc_woocommerce_admin_order_data_after_address', 10, 1 );
+    } else {
+        add_action( 'woocommerce_admin_order_data_after_shipping_address', 'dtwc_woocommerce_admin_order_data_after_address', 10, 1 );
+    }
+}
+add_action( 'woocommerce_init', 'dtwc_woocommerce_init' );

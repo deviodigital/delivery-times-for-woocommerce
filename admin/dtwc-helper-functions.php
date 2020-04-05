@@ -15,6 +15,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Get the Delivery time format selected in the DTWC Admin Settings
+ *
+ * @return string|bool
+ */
+function dtwc_business_delivery_time_format() {
+    $business = get_option( 'dtwc_business' );
+
+    if ( isset( $business['delivery_time_format'] ) && '' !== $business['delivery_time_format'] ) {
+        $delivery_time_format = $business['delivery_time_format'];
+    } else {
+        $delivery_time_format = FALSE;
+    }
+
+	return apply_filters( 'dtwc_business_delivery_time_format', $delivery_time_format );
+}
+
+/**
+ * Filter the Delivery time based on the DTWC Admin Settings
+ *
+ * @return string|bool
+ */
+function dtwc_time_format_display() {
+    // Set the selected time format.
+    if ( '24hr' == dtwc_business_delivery_time_format() ) {
+        $time_format = 'H:i';
+    } else {
+        $time_format = 'g:i a';
+    }
+
+	return $time_format;
+}
+apply_filters( 'dtwc_time_format', 'dtwc_time_format_display' );
+
+/**
  * Get the Delivery days selected in the DTWC Admin Settings
  *
  * @return string|bool
@@ -183,3 +217,21 @@ function dtwc_delivery_preorder_days() {
 
 	return apply_filters( 'dtwc_delivery_preorder_days', $preorder_days );
 }
+
+/**
+ * Get the Delivery time placement for Edit Order screens
+ *
+ * @return string|bool
+ */
+function dtwc_delivery_time_edit_order_display() {
+    $business = get_option( 'dtwc_advanced' );
+
+    if ( isset( $business['delivery_time_edit_order_display'] ) && '' !== $business['delivery_time_edit_order_display'] ) {
+        $display = $business['delivery_time_edit_order_display'];
+    } else {
+        $display = FALSE;
+    }
+
+	return apply_filters( 'dtwc_delivery_time_edit_order_display', $display );
+}
+

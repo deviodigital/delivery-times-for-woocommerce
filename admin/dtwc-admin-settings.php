@@ -70,11 +70,18 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 			'title' => esc_attr__( 'Basic Settings', 'dtwc' ),
 		)
 	);
-	// Section: Other Settings.
+	// Section: Business Settings.
 	$dtwc_obj->add_section(
 		array(
 			'id'    => 'dtwc_business',
 			'title' => esc_attr__( 'Business Hours', 'dtwc' ),
+		)
+	);
+	// Section: Advanced Settings.
+	$dtwc_obj->add_section(
+		array(
+			'id'    => 'dtwc_advanced',
+			'title' => esc_attr__( 'Advanced Settings', 'dtwc' ),
 		)
 	);
 
@@ -225,5 +232,23 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 			'desc'    => esc_attr__( 'What time does your business stop delivering orders?', 'dtwc' ),
 		)
 	);
+
+    // Field: Delivery time edit order display.
+	$dtwc_obj->add_field(
+		'dtwc_advanced',
+		array(
+			'id'      => 'delivery_time_edit_order_display',
+			'type'    => 'select',
+			'name'    => esc_attr__( 'Delivery time admin placement', 'dtwc' ),
+			'desc'    => esc_attr__( 'Choose where to display the delivery time on the Edit Order screen', 'dtwc' ),
+            'options' => array(
+                'billing'  => esc_attr__( 'After the billing address', 'dtwc' ),
+                'shipping' => esc_attr__( 'After the shipping address', 'dtwc' )
+            ),
+            'default' => 'shipping',
+		)
+	);
+
+
 
 }
