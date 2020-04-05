@@ -188,6 +188,22 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
+    // Field: Delivery time format.
+	$dtwc_obj->add_field(
+		'dtwc_business',
+		array(
+			'id'      => 'delivery_time_format',
+			'type'    => 'select',
+			'name'    => esc_attr__( 'Delivery time format', 'dtwc' ),
+			'desc'    => esc_attr__( 'Choose between the 12 and 24 hour clock time format', 'dtwc' ),
+            'options' => array(
+                '12hr' => esc_attr__( '12-hr clock', 'dtwc' ),
+                '24hr' => esc_attr__( '24-hr clock', 'dtwc' )
+            ),
+            'default' => '12hr',
+		)
+	);
+
 	// Array: Delivery days.
 	$delivery_days = array(
 		'sunday'    => esc_attr__( 'Sunday', 'dtwc' ),
