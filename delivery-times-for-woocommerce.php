@@ -101,7 +101,7 @@ register_activation_hook( __FILE__, 'dtwc_activate' );
 
 /**
  * Redirect to the Delivery Times for WooCommerce Settings page on single plugin activation
- * 
+ *
  * @since 1.0
  */
 function dtwc_redirect() {
