@@ -40,13 +40,13 @@ function dtwc_woocommerce_admin_order_data_after_address( $order ) {
 
 /**
  * Run specific codes on WooCommerce init
- * 
+ *
  * @since 1.2
  * @return void
  */
 function dtwc_woocommerce_init() {
     $after_address = dtwc_delivery_time_edit_order_display();
-    if ( 'billing' == $after_adress ) {
+    if ( 'billing' == $after_address ) {
         add_action( 'woocommerce_admin_order_data_after_billing_address', 'dtwc_woocommerce_admin_order_data_after_address', 10, 1 );
     } else {
         add_action( 'woocommerce_admin_order_data_after_shipping_address', 'dtwc_woocommerce_admin_order_data_after_address', 10, 1 );
