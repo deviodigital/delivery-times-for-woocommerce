@@ -12,7 +12,7 @@
 
 /**
  * Add Delivery Date & Time checkout fields
- * 
+ *
  * @since 1.0
  */
 function dtwc_delivery_info_checkout_fields( $checkout ) {
@@ -91,7 +91,7 @@ add_action( 'woocommerce_after_checkout_billing_form', 'dtwc_delivery_info_check
 
 /**
  * Process the Delivery Date & Time checkout fields
- * 
+ *
  * @since 1.0
  */
 function dtwc_delivery_date_checkout_field_process() {
@@ -116,7 +116,7 @@ add_action( 'woocommerce_checkout_process', 'dtwc_delivery_date_checkout_field_p
 
 /**
  * Save Delivery Date & Time checkout fields
- * 
+ *
  * @since 1.0
  */
 function dtwc_add_order_delivery_info_to_order ( $order_id ) {
@@ -131,7 +131,7 @@ add_action( 'woocommerce_checkout_update_order_meta', 'dtwc_add_order_delivery_i
 
 /**
  * Add Delivery Date & Time checkout fields to WooCommerce emails.
- * 
+ *
  * @since 1.0
  */
 function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
@@ -176,7 +176,7 @@ add_filter( 'woocommerce_email_order_meta_fields', 'dtwc_add_delivery_info_to_em
 
 /**
  * Add Delivery Date & Time checkout fields to WooCommerce thank you page.
- * 
+ *
  * @since 1.0
  */
 function dtwc_add_delivery_info_to_order_received_page( $order ) {
