@@ -46,7 +46,7 @@ function dtwc_time_format_display() {
 
 	return $time_format;
 }
-apply_filters( 'dtwc_time_format', 'dtwc_time_format_display' );
+add_filter( 'dtwc_time_format', 'dtwc_time_format_display' );
 
 /**
  * Get the Delivery days selected in the DTWC Admin Settings
@@ -234,4 +234,3 @@ function dtwc_delivery_time_edit_order_display() {
 
 	return apply_filters( 'dtwc_delivery_time_edit_order_display', $display );
 }
-
