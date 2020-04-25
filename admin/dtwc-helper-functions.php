@@ -32,23 +32,6 @@ function dtwc_business_delivery_time_format() {
 }
 
 /**
- * Filter the Delivery time based on the DTWC Admin Settings
- *
- * @return string|bool
- */
-function dtwc_time_format_display() {
-    // Set the selected time format.
-    if ( '24hr' == dtwc_business_delivery_time_format() ) {
-        $time_format = 'H:i';
-    } else {
-        $time_format = 'g:i a';
-    }
-
-	return $time_format;
-}
-add_filter( 'dtwc_time_format', 'dtwc_time_format_display' );
-
-/**
  * Get the Delivery days selected in the DTWC Admin Settings
  *
  * @return string|bool

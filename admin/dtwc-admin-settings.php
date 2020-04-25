@@ -63,13 +63,14 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 	 */
 	$dtwc_obj = new DTWC_ADMIN_SETTINGS();
 
-    // Section: Basic Settings.
+  // Section: Basic Settings.
 	$dtwc_obj->add_section(
 		array(
 			'id'    => 'dtwc_basic',
 			'title' => esc_attr__( 'Basic Settings', 'dtwc' ),
 		)
 	);
+
 	// Section: Business Settings.
 	$dtwc_obj->add_section(
 		array(
@@ -77,6 +78,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 			'title' => esc_attr__( 'Business Hours', 'dtwc' ),
 		)
 	);
+
 	// Section: Advanced Settings.
 	$dtwc_obj->add_section(
 		array(
@@ -85,7 +87,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Pre-order days.
+  // Field: Pre-order days.
 	$dtwc_obj->add_field(
 		'dtwc_basic',
 		array(
@@ -96,7 +98,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 			'default'           => '',
 			'sanitize_callback' => 'intval',
 		)
-    );
+  );
 
 	// Field: Preparation days.
 	$dtwc_obj->add_field(
@@ -124,7 +126,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Separator.
+  // Field: Separator.
 	$dtwc_obj->add_field(
 		'dtwc_basic',
 		array(
@@ -133,7 +135,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Delivery date label.
+  // Field: Delivery date label.
 	$dtwc_obj->add_field(
 		'dtwc_basic',
 		array(
@@ -156,7 +158,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Separator.
+  // Field: Separator.
 	$dtwc_obj->add_field(
 		'dtwc_basic',
 		array(
@@ -165,7 +167,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Delivery time label.
+  // Field: Delivery time label.
 	$dtwc_obj->add_field(
 		'dtwc_basic',
 		array(
@@ -177,7 +179,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Require delivery time.
+  // Field: Require delivery time.
 	$dtwc_obj->add_field(
 		'dtwc_basic',
 		array(
@@ -185,22 +187,6 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 			'type' => 'checkbox',
 			'name' => esc_attr__( 'Require delivery time', 'dtwc' ),
 			'desc' => esc_attr__( 'Check this box to require customers select a delivery time during checkout', 'dtwc' ),
-		)
-	);
-
-    // Field: Delivery time format.
-	$dtwc_obj->add_field(
-		'dtwc_business',
-		array(
-			'id'      => 'delivery_time_format',
-			'type'    => 'select',
-			'name'    => esc_attr__( 'Delivery time format', 'dtwc' ),
-			'desc'    => esc_attr__( 'Choose between the 12 and 24 hour clock time format', 'dtwc' ),
-            'options' => array(
-                '12hr' => esc_attr__( '12-hr clock', 'dtwc' ),
-                '24hr' => esc_attr__( '24-hr clock', 'dtwc' )
-            ),
-            'default' => '12hr',
 		)
 	);
 
@@ -249,7 +235,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Delivery time edit order display.
+  // Field: Delivery time edit order display.
 	$dtwc_obj->add_field(
 		'dtwc_advanced',
 		array(
@@ -257,14 +243,12 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 			'type'    => 'select',
 			'name'    => esc_attr__( 'Delivery time admin placement', 'dtwc' ),
 			'desc'    => esc_attr__( 'Choose where to display the delivery time on the Edit Order screen', 'dtwc' ),
-            'options' => array(
-                'billing'  => esc_attr__( 'After the billing address', 'dtwc' ),
-                'shipping' => esc_attr__( 'After the shipping address', 'dtwc' )
-            ),
-            'default' => 'shipping',
+      'options' => array(
+          'billing'  => esc_attr__( 'After the billing address', 'dtwc' ),
+          'shipping' => esc_attr__( 'After the shipping address', 'dtwc' )
+      ),
+      'default' => 'shipping',
 		)
 	);
-
-
 
 }
