@@ -7,7 +7,7 @@ jQuery(document).ready(function( $ ) {
 		maxDate: dtwc_settings.maxDays,
 		showAnim: 'fadeIn',
 		dateFormat: dtwc_settings.dateFormat,
-		firstDay: 0,
+		firstDay: dtwc_settings.firstDay,
 		beforeShowDay: function(date) {
 			var currentWeekday = weekDays[ date.getDay() ];
 			if ( currentWeekday in deliveryDays ) {

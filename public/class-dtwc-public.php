@@ -163,6 +163,7 @@ class DTWC_Public {
 				'deliveryDays'  => $day_num,
 				'deliveryTimes' => $times,
 				'prepTime'      => $prep_time,
+				'firstDay'      => get_option( 'start_of_week' )
 			);
 			wp_localize_script( $this->plugin_name, 'dtwc_settings', $translation_array );
 		}
