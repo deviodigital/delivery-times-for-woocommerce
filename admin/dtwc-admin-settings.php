@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 // Plugin version.
 if ( ! defined( 'DTWC_ADMIN_VERSION' ) ) {
-	define( 'DTWC_ADMIN_VERSION', '1.0.0' );
+	define( 'DTWC_ADMIN_VERSION', '1.1' );
 }
 if ( ! defined( 'DTWC_ADMIN_NAME' ) ) {
 	define( 'DTWC_ADMIN_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
@@ -87,55 +87,7 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-  // Field: Pre-order days.
-	$dtwc_obj->add_field(
-		'dtwc_basic',
-		array(
-			'id'                => 'preorder_days',
-			'type'              => 'number',
-			'name'              => esc_attr__( 'Pre-order days', 'dtwc' ),
-			'desc'              => esc_attr__( 'How many days ahead are customers allowed to place an order? (leave blank for no limit)', 'dtwc' ),
-			'default'           => '',
-			'sanitize_callback' => 'intval',
-		)
-  );
-
-	// Field: Preparation days.
-	$dtwc_obj->add_field(
-		'dtwc_basic',
-		array(
-			'id'                => 'prep_days',
-			'type'              => 'number',
-			'name'              => esc_attr__( 'Delivery days prep', 'dtwc' ),
-			'desc'              => esc_attr__( 'How many days notice do you require for delivery? (leave blank to allow same-day delivery)', 'dtwc' ),
-			'default'           => '',
-			'sanitize_callback' => 'intval',
-		)
-	);
-
-	// Field: Delivery time prep.
-	$dtwc_obj->add_field(
-		'dtwc_basic',
-		array(
-			'id'                => 'prep_time',
-			'type'              => 'number',
-			'name'              => esc_attr__( 'Delivery time prep', 'dtwc' ),
-			'desc'              => esc_attr__( 'How many hours notice do you require for delivery? (useful for same-day delivery)', 'dtwc' ),
-			'default'           => '',
-			'sanitize_callback' => 'intval',
-		)
-	);
-
-  // Field: Separator.
-	$dtwc_obj->add_field(
-		'dtwc_basic',
-		array(
-			'id'   => 'separator_1',
-			'type' => 'separator',
-		)
-	);
-
-  // Field: Delivery date label.
+	// Field: Delivery date label.
 	$dtwc_obj->add_field(
 		'dtwc_basic',
 		array(
@@ -190,6 +142,54 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
+  // Field: Separator.
+	$dtwc_obj->add_field(
+		'dtwc_basic',
+		array(
+			'id'   => 'separator_1',
+			'type' => 'separator',
+		)
+	);
+
+  // Field: Pre-order days.
+	$dtwc_obj->add_field(
+		'dtwc_basic',
+		array(
+			'id'                => 'preorder_days',
+			'type'              => 'number',
+			'name'              => esc_attr__( 'Pre-order days', 'dtwc' ),
+			'desc'              => esc_attr__( 'How many days ahead are customers allowed to place an order? (leave blank for no limit)', 'dtwc' ),
+			'default'           => '',
+			'sanitize_callback' => 'intval',
+		)
+  );
+
+	// Field: Preparation days.
+	$dtwc_obj->add_field(
+		'dtwc_basic',
+		array(
+			'id'                => 'prep_days',
+			'type'              => 'number',
+			'name'              => esc_attr__( 'Delivery days prep', 'dtwc' ),
+			'desc'              => esc_attr__( 'How many days notice do you require for delivery? (leave blank to allow same-day delivery)', 'dtwc' ),
+			'default'           => '',
+			'sanitize_callback' => 'intval',
+		)
+	);
+
+	// Field: Delivery time prep.
+	$dtwc_obj->add_field(
+		'dtwc_basic',
+		array(
+			'id'                => 'prep_time',
+			'type'              => 'number',
+			'name'              => esc_attr__( 'Delivery time prep', 'dtwc' ),
+			'desc'              => esc_attr__( 'How many hours notice do you require for delivery? (useful for same-day delivery)', 'dtwc' ),
+			'default'           => '',
+			'sanitize_callback' => 'intval',
+		)
+	);
+
 	// Array: Delivery days.
 	$delivery_days = array(
 		'sunday'    => esc_attr__( 'Sunday', 'dtwc' ),
@@ -213,14 +213,14 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 		)
 	);
 
-    // Field: Opening time.
+  // Field: Opening time.
 	$dtwc_obj->add_field(
 		'dtwc_business',
 		array(
-			'id'      => 'opening_time',
-			'type'    => 'time',
-			'name'    => esc_attr__( 'Opening time', 'dtwc' ),
-			'desc'    => esc_attr__( 'What time does your business start delivering orders?', 'dtwc' ),
+			'id'   => 'opening_time',
+			'type' => 'time',
+			'name' => esc_attr__( 'Opening time', 'dtwc' ),
+			'desc' => esc_attr__( 'What time does your business start delivering orders?', 'dtwc' ),
 		)
 	);
 
@@ -228,10 +228,10 @@ if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
 	$dtwc_obj->add_field(
 		'dtwc_business',
 		array(
-			'id'      => 'closing_time',
-			'type'    => 'time',
-			'name'    => esc_attr__( 'Closing time', 'dtwc' ),
-			'desc'    => esc_attr__( 'What time does your business stop delivering orders?', 'dtwc' ),
+			'id'   => 'closing_time',
+			'type' => 'time',
+			'name' => esc_attr__( 'Closing time', 'dtwc' ),
+			'desc' => esc_attr__( 'What time does your business stop delivering orders?', 'dtwc' ),
 		)
 	);
 
