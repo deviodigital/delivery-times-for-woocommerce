@@ -11,10 +11,10 @@ jQuery(document).ready(function( $ ) {
 		beforeShowDay: function(date) {
 			var currentWeekday = weekDays[ date.getDay() ];
 			if ( currentWeekday in deliveryDays ) {
-				// So enable the date here by returning an array
-				return [ true, "custom_css_class", "This date is available"];
+				// So enable the date here by returning an array.
+				return [ true, "dtwc_date_available", "This date is available"];
 			}
-			return [ false, "unavailable_css_class", "This date is unavailable" ];
+			return [ false, "dtwc_date_unavailable", "This date is unavailable" ];
 		}
 	} );
 } );
@@ -38,7 +38,7 @@ jQuery(document).ready(function( $ ) {
 			for (var i=0;tt<24*60; i++) {
 				var hh = Math.floor(tt/60);
 				var mm = (tt%60);
-				// Time added to array.				
+				// Time added to array.
 				times[i] = ('0' + (hh % 12)).slice(-2) + ':' + ('0' + mm).slice(-2);
 				// Add 30 minutes to time.
 				tt = tt + x;
