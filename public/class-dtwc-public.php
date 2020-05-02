@@ -159,6 +159,7 @@ class DTWC_Public {
 			$translation_array = array(
 				'minDate'       => dtwc_delivery_prep_days(),
 				'maxDays'       => dtwc_delivery_preorder_days(),
+				'dateFormat'    => apply_filters( 'dtwc_date_format', get_option( 'date_format' ) ),
 				'deliveryDays'  => $day_num,
 				'deliveryTimes' => $times,
 				'prepTime'      => $prep_time,
