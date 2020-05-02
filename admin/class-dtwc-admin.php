@@ -60,7 +60,7 @@ class DTWC_Admin {
 	 * @since    1.0
 	 */
 	public function enqueue_styles() {
-		//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dtwc-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dtwc-admin.css', array(), $this->version, 'all' );
 	}
 
 	/**
