@@ -2,8 +2,8 @@
 Contributors: deviodigital
 Tags: delivery, delivery-times, courier, woocommerce, order-delivery
 Requires at least: 3.0.1
-Tested up to: 5.2.4
-Stable tag: 1.3
+Tested up to: 5.4.0
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,20 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 7. Delivery date & time added to WooCommerce admin Order details screen
 
 == Changelog ==
+
+= 1.4 =
+*   Added option to select placement of delivery time in Edit Order screen in `admin/dtwc-admin-settings.php`
+*   Added helper function to get delivery time placement option in `admin/dtwc-functions.php`
+*   Added function to move the delivery time on Edit Order screens based on admin setting in `admin/dtwc-woocommerce-settings.php`
+*   Bugfix to change `apply_filters` to `add_filter` in `admin/dtwc-helper-functions.php`
+*   Updated code to remove warning for empty variable in `public/class-dtwc-public.php`
+*   Updated class datepicker class names in `public/js/dtwc-public.js`
+*   Updated admin settings table styles in `admin/css/dtwc-admin.css`
+*   Updated text strings for localization in `languages/dtwc.pot`
+*   Updated the date/time format to default as the WordPress settings options in multiple files
+*   Updated first day of week in datepicker to use default WP setting in multiple files
+*   Updated datepicker to use `dtwc_date_format` filter in multiple files
+*   General code cleanup throughout multiple files
 
 = 1.3 =
 *   Added `dtwc_date_format` filter in `admin/dtwc-woocommerce-checkout.php`

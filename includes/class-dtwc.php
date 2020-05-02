@@ -68,7 +68,7 @@ class DTWC {
 	 */
 	public function __construct() {
 		$this->plugin_name = 'dtwc';
-		$this->version     = '1.3';
+		$this->version     = '1.4';
 
 		if ( defined( 'DTWC_VERSION' ) ) {
 			$this->version = DTWC_VERSION;
@@ -138,7 +138,7 @@ class DTWC {
 
 		/**
 		 * The file responsible for defining the WooCommerce settings.
-		 * 
+		 *
 		 * @since 1.2
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-woocommerce-settings.php';
@@ -147,7 +147,7 @@ class DTWC {
 		if ( function_exists( 'run_ddwc' ) ) {
 			/**
 			 * The file responsible for defining the Delivery Drivers for WooCommerce settings.
-			 * 
+			 *
 			 * @since 1.2
 			 */
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/dtwc-ddwc-settings.php';
