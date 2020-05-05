@@ -6,7 +6,7 @@ jQuery(document).ready(function( $ ) {
 		minDate: dtwc_settings.minDate,
 		maxDate: dtwc_settings.maxDays,
 		showAnim: 'fadeIn',
-		dateFormat: dtwc_settings.dateFormat,
+		dateFormat: 'yy-mm-dd',
 		firstDay: dtwc_settings.firstDay,
 		beforeShowDay: function(date) {
 			var currentWeekday = weekDays[ date.getDay() ];
