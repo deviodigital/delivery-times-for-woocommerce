@@ -19,7 +19,7 @@
  *
  * @package    DTWC
  * @subpackage DTWC/includes
- * @author     Devio Digital <deviodigital@gmail.com>
+ * @author     Devio Digital <contact@deviodigital.com>
  */
 class DTWC_Loader {
 
