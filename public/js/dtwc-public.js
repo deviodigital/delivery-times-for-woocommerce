@@ -25,6 +25,8 @@ jQuery(document).ready(function( $ ) {
 			var minDate = $.datepicker.formatDate('yy-mm-dd', minDate);
 			console.log('current time is NOT ahead of any deliveryTimes');
 		}
+	} else {
+		var minDate = dtwc_settings.minDate;
 	}
 
 	console.log(minDate);
