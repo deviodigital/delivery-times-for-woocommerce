@@ -21,31 +21,27 @@ jQuery(document).ready(function( $ ) {
 
 jQuery(document).ready(function( $ ) {
 	$('#dtwc_delivery_date').change(function() {
-		var date = $(this).val();
-		var varDate = new Date(date);
-		var today = new Date();
+		var chosenDate = $(this).val();
+		var today = $.datepicker.formatDate('yy-mm-dd', new Date());
 
-		today.setHours(0,0,0,0);
+		var x = 30; // minutes interval
+		var times = []; // time array
+		var tt = 0; // start time
 
-		// Delivery date is AFTER today.
-		if (varDate<=today) {
+		// Create times array.
+		for (var i=0;tt<24*60; i++) {
+			var hh = Math.floor(tt/60);
+			var mm = (tt%60);
+			// Time added to array.
+			times[i] = ('0' + (hh % 12)).slice(-2) + ':' + ('0' + mm).slice(-2);
+			// Add 30 minutes to time.
+			tt = tt + x;
+		}
 
-			var x = 30; //minutes interval
-			var times = []; // time array
-			var tt = 0; // start time
-
-			// Create times array.
-			for (var i=0;tt<24*60; i++) {
-				var hh = Math.floor(tt/60);
-				var mm = (tt%60);
-				// Time added to array.
-				times[i] = ('0' + (hh % 12)).slice(-2) + ':' + ('0' + mm).slice(-2);
-				// Add 30 minutes to time.
-				tt = tt + x;
-			}
+		// Delivery date is today.
+		if (today === chosenDate) {
 
 			var deliveryTimes = dtwc_settings.deliveryTimes;
-
 			var result = [];
 
 			for(var t in deliveryTimes){
@@ -53,16 +49,39 @@ jQuery(document).ready(function( $ ) {
 			}
 
 			// Loop through times.
-			result.forEach(myFunction);
+			result.forEach(dateCheck);
+		}
 
-			function myFunction(item) {
+		// Chosen date is AFTER today.
+		if (today < chosenDate) {
 
-				if (item<=dtwc_settings.prepTime) {
-					// Remove specific time from available options.
-					$("#dtwc_delivery_time option[value='" + item + "']").remove();
-				}
+			var deliveryTimes = dtwc_settings.deliveryTimes;
+			var result = [];
+
+			for(var t in deliveryTimes) {
+				result.push(deliveryTimes[t]);
 			}
 
+			// Loop through times.
+			result.forEach(resetTimes);
 		}
+
+		// Prep time check.
+		function dateCheck(item) {
+			// Update delivery times if selected date is today.
+			if (item<=dtwc_settings.prepTime) {
+				// Remove specific time from available options.
+				$("#dtwc_delivery_time option[value='" + item + "']").hide();
+			} else {
+				// Add specific times to available options.
+				$("#dtwc_delivery_time option[value='" + item + "']").show();
+			}
+		}
+
+		// Delivery times reset.
+		function resetTimes(item) {
+			$("#dtwc_delivery_time option[value='" + item + "']").show();
+		}
+		  	
 	});
 });
