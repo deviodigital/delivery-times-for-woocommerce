@@ -1,9 +1,36 @@
 jQuery(document).ready(function( $ ) {
 	var deliveryDays = dtwc_settings.deliveryDays;
 	var weekDays = [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ];
+	var deliveryTimes = dtwc_settings.deliveryTimes;
+	var prepDays = dtwc_settings.minDate;
+
+	function minutes_with_leading_zeros( dt ) { 
+		return (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();
+	}
+	function hours_with_leading_zeros(dt) { 
+		return (dt.getHours() < 10 ? '0' : '') + dt.getHours();
+	}
+
+	var d = new Date();
+	var curr_hour = hours_with_leading_zeros( d );
+	var curr_min = minutes_with_leading_zeros( d );
+	var currentTime = curr_hour + ":" + curr_min;
+
+	if (0 == prepDays) {
+		if ( deliveryTimes.some(el => el > currentTime) ) {
+			var minDate = $.datepicker.formatDate('yy-mm-dd', new Date());
+			console.log('current time is Greater than an element in the deliveryTimes');
+		} else {
+			var minDate = new Date((new Date()).valueOf() + 1000*3600*24);
+			var minDate = $.datepicker.formatDate('yy-mm-dd', minDate);
+			console.log('current time is NOT ahead of any deliveryTimes');
+		}
+	}
+
+	console.log(minDate);
 
 	$('#dtwc_delivery_date').datepicker( {
-		minDate: dtwc_settings.minDate,
+		minDate: minDate,
 		maxDate: dtwc_settings.maxDays,
 		showAnim: 'fadeIn',
 		dateFormat: 'yy-mm-dd',
