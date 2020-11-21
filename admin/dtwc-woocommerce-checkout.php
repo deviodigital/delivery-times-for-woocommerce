@@ -211,5 +211,4 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
         echo do_action( 'dtwc_order_received_delivery_details_after' );
 	}
 }
-//add_filter( 'woocommerce_order_details_before_order_table', 'dtwc_add_delivery_date_to_order_received_page', 10 , 1 );
 add_action( 'woocommerce_order_details_after_order_table_items', 'dtwc_add_delivery_info_to_order_received_page', 10 , 1 );

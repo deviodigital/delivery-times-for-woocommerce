@@ -19,11 +19,9 @@ jQuery(document).ready(function( $ ) {
 	if (0 == prepDays) {
 		if ( deliveryTimes.some(el => el > currentTime) ) {
 			var minDate = $.datepicker.formatDate('yy-mm-dd', new Date());
-			console.log('current time is Greater than an element in the deliveryTimes');
 		} else {
 			var minDate = new Date((new Date()).valueOf() + 1000*3600*24);
 			var minDate = $.datepicker.formatDate('yy-mm-dd', minDate);
-			console.log('current time is NOT ahead of any deliveryTimes');
 		}
 	} else {
 		var minDate = dtwc_settings.minDate;
@@ -111,6 +109,6 @@ jQuery(document).ready(function( $ ) {
 		function resetTimes(item) {
 			$("#dtwc_delivery_time option[value='" + item + "']").show();
 		}
-		  	
+
 	});
 });

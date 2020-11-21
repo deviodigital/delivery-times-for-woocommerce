@@ -108,7 +108,7 @@ function dtwc_redirect() {
     if ( get_option( 'dtwc_do_activation_redirect', false ) ) {
         delete_option( 'dtwc_do_activation_redirect' );
         if ( ! isset( $_GET['activate-multi'] ) ) {
-            wp_redirect( "admin.php?page=dtwc_settings" );
+            wp_redirect( 'admin.php?page=dtwc_settings' );
         }
     }
 }

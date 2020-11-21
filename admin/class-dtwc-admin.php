@@ -44,8 +44,8 @@ class DTWC_Admin {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0
-	 * @param      string    $plugin_name       The name of this plugin.
-	 * @param      string    $version    The version of this plugin.
+	 * @param    string    $plugin_name    The name of this plugin.
+	 * @param    string    $version        The version of this plugin.
 	 */
 	public function __construct( $plugin_name, $version ) {
 
@@ -60,7 +60,7 @@ class DTWC_Admin {
 	 * @since    1.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dtwc-admin.css', array(), $this->version, 'all' );
+		//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dtwc-admin.css', array(), $this->version, 'all' );
 	}
 
 	/**
