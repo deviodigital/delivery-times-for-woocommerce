@@ -93,7 +93,7 @@ function dtwc_delivery_date_label() {
     if ( isset( $basic['delivery_date_label'] ) && '' !== $basic['delivery_date_label'] ) {
         $delivery_date_label = $basic['delivery_date_label'];
     } else {
-        $delivery_date_label = 'Delivery date';
+        $delivery_date_label = __( 'Delivery date', 'dtwc' );
     }
 
 	return apply_filters( 'dtwc_delivery_date_label', $delivery_date_label );
@@ -127,7 +127,7 @@ function dtwc_delivery_time_label() {
     if ( isset( $basic['delivery_time_label'] ) && '' !== $basic['delivery_time_label'] ) {
         $delivery_time_label = $basic['delivery_time_label'];
     } else {
-        $delivery_time_label = 'Delivery time';
+        $delivery_time_label = __( 'Delivery time', 'dtwc' );
     }
 
 	return apply_filters( 'dtwc_delivery_time_label', $delivery_time_label );
