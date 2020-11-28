@@ -55,11 +55,12 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
         $delivery_time = strtotime( '+30 minutes', $delivery_time );
     }
 
+    // Set default.
+    $require_date = FALSE;
+
     // Require date?
     if ( 'on' == dtwc_require_delivery_date() ) {
         $require_date = TRUE;
-    } else {
-        $require_date = FALSE;
     }
 
     // Create Delivery date field.
@@ -70,11 +71,12 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
         'required' => $require_date,
     ), $checkout->get_value( 'dtwc_delivery_date' ) );
 
+    // Set default.
+    $require_time = FALSE;
+
     // Require time?
     if ( 'on' == dtwc_require_delivery_time() ) {
         $require_time = TRUE;
-    } else {
-        $require_time = FALSE;
     }
 
     // Create Delivery time field.

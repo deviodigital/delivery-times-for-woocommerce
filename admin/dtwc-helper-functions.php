@@ -21,11 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function dtwc_business_delivery_time_format() {
     $business = get_option( 'dtwc_business' );
+    // Set to false (default).
+    $delivery_time_format = FALSE;
 
     if ( isset( $business['delivery_time_format'] ) && '' !== $business['delivery_time_format'] ) {
         $delivery_time_format = $business['delivery_time_format'];
-    } else {
-        $delivery_time_format = FALSE;
     }
 
 	return apply_filters( 'dtwc_business_delivery_time_format', $delivery_time_format );
@@ -38,11 +38,11 @@ function dtwc_business_delivery_time_format() {
  */
 function dtwc_business_delivery_days() {
     $business = get_option( 'dtwc_business' );
+    // Set to false (default).
+    $delivery_days = FALSE;
 
     if ( isset( $business['delivery_days'] ) && '' !== $business['delivery_days'] ) {
         $delivery_days = $business['delivery_days'];
-    } else {
-        $delivery_days = FALSE;
     }
 
 	return apply_filters( 'dtwc_business_delivery_days', $delivery_days );
@@ -55,11 +55,11 @@ function dtwc_business_delivery_days() {
  */
 function dtwc_business_opening_time() {
     $business = get_option( 'dtwc_business' );
+    // Set to false (default).
+    $opening_time = FALSE;
 
     if ( isset( $business['opening_time'] ) && '' !== $business['opening_time'] ) {
         $opening_time = $business['opening_time'];
-    } else {
-        $opening_time = FALSE;
     }
 
 	return apply_filters( 'dtwc_business_opening_time', $opening_time );
@@ -72,11 +72,11 @@ function dtwc_business_opening_time() {
  */
 function dtwc_business_closing_time() {
     $business = get_option( 'dtwc_business' );
+    // Set to false (default).
+    $closing_time = FALSE;
 
     if ( isset( $business['closing_time'] ) && '' !== $business['closing_time'] ) {
         $closing_time = $business['closing_time'];
-    } else {
-        $closing_time = FALSE;
     }
 
 	return apply_filters( 'dtwc_business_closing_time', $closing_time );
@@ -90,10 +90,11 @@ function dtwc_business_closing_time() {
 function dtwc_delivery_date_label() {
     $basic = get_option( 'dtwc_basic' );
 
+    // Set default delivery date label.
+    $delivery_date_label = __( 'Delivery date', 'dtwc' );
+
     if ( isset( $basic['delivery_date_label'] ) && '' !== $basic['delivery_date_label'] ) {
         $delivery_date_label = $basic['delivery_date_label'];
-    } else {
-        $delivery_date_label = __( 'Delivery date', 'dtwc' );
     }
 
 	return apply_filters( 'dtwc_delivery_date_label', $delivery_date_label );
@@ -107,10 +108,11 @@ function dtwc_delivery_date_label() {
 function dtwc_require_delivery_date() {
     $basic = get_option( 'dtwc_basic' );
 
+    // Turn off delivery date requirement.
+    $require_delivery_date = 'off';
+
     if ( isset( $basic['require_delivery_date'] ) && '' !== $basic['require_delivery_date'] ) {
         $require_delivery_date = $basic['require_delivery_date'];
-    } else {
-        $require_delivery_date = 'off';
     }
 
 	return apply_filters( 'dtwc_require_delivery_date', $require_delivery_date );
@@ -124,10 +126,11 @@ function dtwc_require_delivery_date() {
 function dtwc_delivery_time_label() {
     $basic = get_option( 'dtwc_basic' );
 
+    // Set default delivery time label.
+    $delivery_time_label = __( 'Delivery time', 'dtwc' );
+
     if ( isset( $basic['delivery_time_label'] ) && '' !== $basic['delivery_time_label'] ) {
         $delivery_time_label = $basic['delivery_time_label'];
-    } else {
-        $delivery_time_label = __( 'Delivery time', 'dtwc' );
     }
 
 	return apply_filters( 'dtwc_delivery_time_label', $delivery_time_label );
@@ -141,10 +144,11 @@ function dtwc_delivery_time_label() {
 function dtwc_require_delivery_time() {
     $basic = get_option( 'dtwc_basic' );
 
+    // Turn off delivery time requirement.
+    $require_delivery_time = 'off';
+
     if ( isset( $basic['require_delivery_time'] ) && '' !== $basic['require_delivery_time'] ) {
         $require_delivery_time = $basic['require_delivery_time'];
-    } else {
-        $require_delivery_time = 'off';
     }
 
 	return apply_filters( 'dtwc_require_delivery_time', $require_delivery_time );
@@ -158,10 +162,11 @@ function dtwc_require_delivery_time() {
 function dtwc_delivery_prep_days() {
     $basic = get_option( 'dtwc_basic' );
 
+    // Prep days (default).
+    $prep_days = 0;
+
     if ( isset( $basic['prep_days'] ) && '' !== $basic['prep_days'] ) {
         $prep_days = $basic['prep_days'];
-    } else {
-        $prep_days = 0;
     }
 
 	return apply_filters( 'dtwc_delivery_prep_days', $prep_days );
@@ -175,10 +180,11 @@ function dtwc_delivery_prep_days() {
 function dtwc_delivery_prep_time() {
     $basic = get_option( 'dtwc_basic' );
 
+    // Prep time (default).
+    $prep_time = NULL;
+
     if ( isset( $basic['prep_time'] ) && '' !== $basic['prep_time'] ) {
         $prep_time = $basic['prep_time'];
-    } else {
-        $prep_time = NULL;
     }
 
 	return apply_filters( 'dtwc_delivery_prep_time', $prep_time );
@@ -192,10 +198,11 @@ function dtwc_delivery_prep_time() {
 function dtwc_delivery_preorder_days() {
     $basic = get_option( 'dtwc_basic' );
 
+    // Preorder days (default).
+    $preorder_days = NULL;
+
     if ( isset( $basic['preorder_days'] ) && '' !== $basic['preorder_days'] ) {
         $preorder_days = $basic['preorder_days'];
-    } else {
-        $preorder_days = NULL;
     }
 
 	return apply_filters( 'dtwc_delivery_preorder_days', $preorder_days );
@@ -209,10 +216,11 @@ function dtwc_delivery_preorder_days() {
 function dtwc_delivery_time_edit_order_display() {
     $business = get_option( 'dtwc_advanced' );
 
+    // Turn off display (default).
+    $display = FALSE;
+
     if ( isset( $business['delivery_time_edit_order_display'] ) && '' !== $business['delivery_time_edit_order_display'] ) {
         $display = $business['delivery_time_edit_order_display'];
-    } else {
-        $display = FALSE;
     }
 
 	return apply_filters( 'dtwc_delivery_time_edit_order_display', $display );
