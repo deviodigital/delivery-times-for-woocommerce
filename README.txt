@@ -2,8 +2,8 @@
 Contributors: deviodigital
 Tags: delivery, delivery-times, courier, woocommerce, order-delivery
 Requires at least: 3.0.1
-Tested up to: 5.4.0
-Stable tag: 1.4.1
+Tested up to: 5.5.3
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,13 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 7. Delivery date & time added to WooCommerce admin Order details screen
 
 == Changelog ==
+
+= 1.5 =
+*   Added minDate value if prepDays is not 0 in `public/js/dtwc-public.js`
+*   Bugfix delivery times in checkout when selecting today in `public/js/dtwc-public.js`
+*   Updated minDate to be set as `tomorrow` if the current time is after all delivery times `public/js/dtwc-public.js`
+*   Updated text strings for localization in `languages/dtwc.pot`
+*   General code cleanup throughout multiple files
 
 = 1.4.1 =
 *   Bugfix date display update on checkout in `public/js/dtwc-public.js`
