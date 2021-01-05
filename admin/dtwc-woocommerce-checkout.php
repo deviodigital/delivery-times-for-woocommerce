@@ -28,7 +28,7 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     $delivery_time = ceil( $delivery_time / ( 30 * 60 ) ) * ( 30 * 60 );
 
     // Create times array with default option.
-    $times = array( '' => apply_filters( 'dtwc_checkout_delivery_times_select_default_text', __( 'Select a desired time for delivery', 'dtwc' ) ) );
+    $times = array( '' => apply_filters( 'dtwc_checkout_delivery_times_select_default_text', __( 'Select a desired time for delivery', 'delivery-times-for-woocommerce' ) ) );
 
     // Loop through and add delivery times based on open/close times.
     while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
@@ -99,7 +99,7 @@ add_action( 'woocommerce_after_checkout_billing_form', 'dtwc_delivery_info_check
 function dtwc_delivery_date_checkout_field_process() {
 
     // Create error message.
-    $message = __( 'Please select a delivery date.', 'dtwc' );
+    $message = __( 'Please select a delivery date.', 'delivery-times-for-woocommerce' );
 
     // Check if set, if its not set add an error.
     if ( ! $_POST['dtwc_delivery_date'] && 'on' == dtwc_require_delivery_date() ) {
@@ -107,7 +107,7 @@ function dtwc_delivery_date_checkout_field_process() {
     }
 
     // Create error message.
-    $message = __( 'Please select a delivery time.', 'dtwc' );
+    $message = __( 'Please select a delivery time.', 'delivery-times-for-woocommerce' );
 
     // Check if set, if its not set add an error.
     if ( ! $_POST['dtwc_delivery_time'] && 'on' == dtwc_require_delivery_time() ) {

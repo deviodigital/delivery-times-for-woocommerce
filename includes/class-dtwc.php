@@ -67,7 +67,7 @@ class DTWC {
 	 * @since    1.0
 	 */
 	public function __construct() {
-		$this->plugin_name = 'dtwc';
+		$this->plugin_name = 'delivery-times-for-woocommerce';
 		$this->version     = '1.5';
 
 		if ( defined( 'DTWC_VERSION' ) ) {

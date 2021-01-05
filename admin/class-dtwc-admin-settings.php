@@ -726,8 +726,8 @@ if ( ! class_exists( 'DTWC_ADMIN_SETTINGS' ) ) :
 			// add_options_page( $page_title, $menu_title, $capability, $menu_slug, array( $this, $callable ) );
 			add_submenu_page(
 				'woocommerce',
-				__( 'Delivery Times for WooCommerce', 'dtwc' ),
-				__( 'Delivery Times', 'dtwc' ),
+				__( 'Delivery Times for WooCommerce', 'delivery-times-for-woocommerce' ),
+				__( 'Delivery Times', 'delivery-times-for-woocommerce' ),
 				'manage_options',
 				'dtwc_settings',
 				array( $this, 'plugin_page' )
@@ -736,8 +736,8 @@ if ( ! class_exists( 'DTWC_ADMIN_SETTINGS' ) ) :
 
 		public function plugin_page() {
 			echo '<div class="wrap">';
-			echo '<h1>' . __( 'Delivery Times for WooCommerce', 'dtwc' ) . ' <span style="font-size:50%;">v' . DTWC_VERSION . '</span></h1>';
-			echo '<p>' . __( 'Brought to you by', 'dtwc' ) . ' <a href="https://www.deviodigital.com/" target="_blank">Devio Digital</a> | <a href="https://www.deviodigital.com/documentation/" target="_blank">Documentation</a>';
+			echo '<h1>' . __( 'Delivery Times for WooCommerce', 'delivery-times-for-woocommerce' ) . ' <span style="font-size:50%;">v' . DTWC_VERSION . '</span></h1>';
+			echo '<p>' . __( 'Brought to you by', 'delivery-times-for-woocommerce' ) . ' <a href="https://www.deviodigital.com/" target="_blank">Devio Digital</a> | <a href="https://www.deviodigital.com/documentation/" target="_blank">Documentation</a>';
 			$this->show_navigation();
 			$this->show_forms();
 			echo '</div>';

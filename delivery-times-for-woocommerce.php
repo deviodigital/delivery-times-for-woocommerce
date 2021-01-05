@@ -16,7 +16,7 @@
  * Author URI:        https://www.deviodigital.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       dtwc
+ * Text Domain:       delivery-times-for-woocommerce
  * Domain Path:       /languages
  */
 
@@ -82,7 +82,7 @@ run_dtwc();
  * @return array updatead array of links related to the plugin.
  */
 function dtwc_settings_link( $links ) {
-	$settings_link = '<a href="admin.php?page=dtwc_settings">' . esc_attr__( 'Settings', 'dtwc' ) . '</a>';
+	$settings_link = '<a href="admin.php?page=dtwc_settings">' . esc_attr__( 'Settings', 'delivery-times-for-woocommerce' ) . '</a>';
 	array_unshift( $links, $settings_link );
 	return $links;
 }

@@ -91,7 +91,7 @@ function dtwc_delivery_date_label() {
     $basic = get_option( 'dtwc_basic' );
 
     // Set default delivery date label.
-    $delivery_date_label = __( 'Delivery date', 'dtwc' );
+    $delivery_date_label = __( 'Delivery date', 'delivery-times-for-woocommerce' );
 
     if ( isset( $basic['delivery_date_label'] ) && '' !== $basic['delivery_date_label'] ) {
         $delivery_date_label = $basic['delivery_date_label'];
@@ -127,7 +127,7 @@ function dtwc_delivery_time_label() {
     $basic = get_option( 'dtwc_basic' );
 
     // Set default delivery time label.
-    $delivery_time_label = __( 'Delivery time', 'dtwc' );
+    $delivery_time_label = __( 'Delivery time', 'delivery-times-for-woocommerce' );
 
     if ( isset( $basic['delivery_time_label'] ) && '' !== $basic['delivery_time_label'] ) {
         $delivery_time_label = $basic['delivery_time_label'];
