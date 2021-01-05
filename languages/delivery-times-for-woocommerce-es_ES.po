@@ -1,0 +1,243 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Delivery Times for WooCommerce\n"
+"POT-Creation-Date: 2021-01-04 21:05-0500\n"
+"PO-Revision-Date: 2021-01-04 21:13-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: delivery-times-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: es\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: admin/class-dtwc-admin-settings.php:615
+msgid "Choose File"
+msgstr "Elija el archivo"
+
+#: admin/class-dtwc-admin-settings.php:636
+msgid "Choose Image"
+msgstr "Elegir imagen"
+
+#. Plugin Name of the plugin/theme
+#: admin/class-dtwc-admin-settings.php:729
+#: admin/class-dtwc-admin-settings.php:739
+msgid "Delivery Times for WooCommerce"
+msgstr "Tiempos de entrega para WooCommerce"
+
+#: admin/class-dtwc-admin-settings.php:730
+msgid "Delivery Times"
+msgstr "Tiempos de entrega"
+
+#: admin/class-dtwc-admin-settings.php:740
+msgid "Brought to you by"
+msgstr "Presentado por"
+
+#: admin/dtwc-admin-settings.php:70
+msgid "Basic Settings"
+msgstr "Ajustes Básicos"
+
+#: admin/dtwc-admin-settings.php:78
+msgid "Business Hours"
+msgstr "Horario de atención"
+
+#: admin/dtwc-admin-settings.php:86
+msgid "Advanced Settings"
+msgstr "Ajustes avanzados"
+
+#: admin/dtwc-admin-settings.php:96
+msgid "Delivery date label"
+msgstr "Etiqueta de fecha de entrega"
+
+#: admin/dtwc-admin-settings.php:97 admin/dtwc-admin-settings.php:129
+msgid "The label displayed on checkout page and in order details"
+msgstr ""
+"La etiqueta que se muestra en la página de pago y en los detalles del pedido"
+
+#: admin/dtwc-admin-settings.php:98 admin/dtwc-helper-functions.php:94
+msgid "Delivery date"
+msgstr "Fecha de entrega"
+
+#: admin/dtwc-admin-settings.php:108
+msgid "Require delivery date"
+msgstr "Requerir fecha de entrega"
+
+#: admin/dtwc-admin-settings.php:109
+msgid ""
+"Check this box to require customers select a delivery date during checkout"
+msgstr ""
+"Marque esta casilla para solicitar a los clientes que seleccionen una fecha "
+"de entrega durante el pago"
+
+#: admin/dtwc-admin-settings.php:128
+msgid "Delivery time label"
+msgstr "Etiqueta de tiempo de entrega"
+
+#: admin/dtwc-admin-settings.php:130 admin/dtwc-helper-functions.php:130
+msgid "Delivery time"
+msgstr "Tiempo de entrega"
+
+#: admin/dtwc-admin-settings.php:140
+msgid "Require delivery time"
+msgstr "Requerir tiempo de entrega"
+
+#: admin/dtwc-admin-settings.php:141
+msgid ""
+"Check this box to require customers select a delivery time during checkout"
+msgstr ""
+"Marque esta casilla para solicitar a los clientes que seleccionen una hora "
+"de entrega durante el pago"
+
+#: admin/dtwc-admin-settings.php:160
+msgid "Pre-order days"
+msgstr "Días de reserva"
+
+#: admin/dtwc-admin-settings.php:161
+msgid ""
+"How many days ahead are customers allowed to place an order? (leave blank "
+"for no limit)"
+msgstr ""
+"¿Con cuántos días de anticipación se les permite a los clientes realizar un "
+"pedido? (dejar en blanco sin límite)"
+
+#: admin/dtwc-admin-settings.php:173
+msgid "Delivery days prep"
+msgstr "Preparación días de entrega"
+
+#: admin/dtwc-admin-settings.php:174
+msgid ""
+"How many days notice do you require for delivery? (leave blank to allow same-"
+"day delivery)"
+msgstr ""
+"¿Con cuántos días de anticipación necesita para la entrega? (déjelo en "
+"blanco para permitir la entrega el mismo día)"
+
+#: admin/dtwc-admin-settings.php:186
+msgid "Delivery time prep"
+msgstr "Preparación del tiempo de entrega"
+
+#: admin/dtwc-admin-settings.php:187
+msgid ""
+"How many hours notice do you require for delivery? (useful for same-day "
+"delivery)"
+msgstr ""
+"¿Cuántas horas de anticipación necesita para la entrega? (útil para entrega "
+"el mismo día)"
+
+#: admin/dtwc-admin-settings.php:195
+msgid "Sunday"
+msgstr "Domingo"
+
+#: admin/dtwc-admin-settings.php:196
+msgid "Monday"
+msgstr "Lunes"
+
+#: admin/dtwc-admin-settings.php:197
+msgid "Tuesday"
+msgstr "Martes"
+
+#: admin/dtwc-admin-settings.php:198
+msgid "Wednesday"
+msgstr "Miércoles"
+
+#: admin/dtwc-admin-settings.php:199
+msgid "Thursday"
+msgstr "Jueves"
+
+#: admin/dtwc-admin-settings.php:200
+msgid "Friday"
+msgstr "Viernes"
+
+#: admin/dtwc-admin-settings.php:201
+msgid "Saturday"
+msgstr "Sábado"
+
+#: admin/dtwc-admin-settings.php:210
+msgid "Delivery Days"
+msgstr "Días de servicio"
+
+#: admin/dtwc-admin-settings.php:211
+msgid "Select the days of the week that you are open for business"
+msgstr "Seleccione los días de la semana en los que está abierto al público"
+
+#: admin/dtwc-admin-settings.php:222
+msgid "Opening time"
+msgstr "Hora de apertura"
+
+#: admin/dtwc-admin-settings.php:223
+msgid "What time does your business start delivering orders?"
+msgstr "¿A qué hora comienza su empresa a entregar pedidos?"
+
+#: admin/dtwc-admin-settings.php:233
+msgid "Closing time"
+msgstr "Tiempo de cierre"
+
+#: admin/dtwc-admin-settings.php:234
+msgid "What time does your business stop delivering orders?"
+msgstr "¿A qué hora deja de entregar pedidos su empresa?"
+
+#: admin/dtwc-admin-settings.php:244
+msgid "Delivery time admin placement"
+msgstr "Ubicación de administrador de tiempo de entrega"
+
+#: admin/dtwc-admin-settings.php:245
+msgid "Choose where to display the delivery time on the Edit Order screen"
+msgstr "Elija dónde mostrar el tiempo de entrega en la pantalla Editar pedido"
+
+#: admin/dtwc-admin-settings.php:247
+msgid "After the billing address"
+msgstr "Después de la dirección de facturación"
+
+#: admin/dtwc-admin-settings.php:248
+msgid "After the shipping address"
+msgstr "Después de la dirección de envío"
+
+#: admin/dtwc-woocommerce-checkout.php:31
+msgid "Select a desired time for delivery"
+msgstr "Seleccione una hora deseada para la entrega"
+
+#: admin/dtwc-woocommerce-checkout.php:102
+msgid "Please select a delivery date."
+msgstr "Seleccione una fecha de entrega."
+
+#: admin/dtwc-woocommerce-checkout.php:110
+msgid "Please select a delivery time."
+msgstr "Seleccione una hora de entrega."
+
+#: delivery-times-for-woocommerce.php:85
+msgid "Settings"
+msgstr "Ajustes"
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"https://deviodigital.com/how-to-use-the-delivery-times-for-woocommerce-"
+"plugin/"
+msgstr ""
+"https://deviodigital.com/how-to-use-the-delivery-times-for-woocommerce-"
+"plugin/"
+
+#. Description of the plugin/theme
+msgid ""
+"Allow your customers to choose their desired delivery date and time during "
+"checkout with WooCommerce"
+msgstr ""
+"Permita que sus clientes elijan la fecha y hora de entrega deseadas durante "
+"el pago con WooCommerce"
+
+#. Author of the plugin/theme
+msgid "Devio Digital"
+msgstr "Devio Digital"
+
+#. Author URI of the plugin/theme
+msgid "https://www.deviodigital.com/"
+msgstr "https://www.deviodigital.com"
