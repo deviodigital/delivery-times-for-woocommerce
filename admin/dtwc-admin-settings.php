@@ -20,17 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 // Plugin version.
-if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_VERSION' ) ) {
-	define( 'Delivery_Times_For_WooCommerce_ADMIN_VERSION', '1.1' );
+if ( ! defined( 'DTWC_ADMIN_VERSION' ) ) {
+	define( 'DTWC_ADMIN_VERSION', '1.1' );
 }
-if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_NAME' ) ) {
-	define( 'Delivery_Times_For_WooCommerce_ADMIN_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
+if ( ! defined( 'DTWC_ADMIN_NAME' ) ) {
+	define( 'DTWC_ADMIN_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
 }
-if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_DIR' ) ) {
-	define( 'Delivery_Times_For_WooCommerce_ADMIN_DIR', WP_PLUGIN_DIR . '/' . Delivery_Times_For_WooCommerce_ADMIN_NAME );
+if ( ! defined( 'DTWC_ADMIN_DIR' ) ) {
+	define( 'DTWC_ADMIN_DIR', WP_PLUGIN_DIR . '/' . DTWC_ADMIN_NAME );
 }
-if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_URL' ) ) {
-	define( 'Delivery_Times_For_WooCommerce_ADMIN_URL', WP_PLUGIN_URL . '/' . Delivery_Times_For_WooCommerce_ADMIN_NAME );
+if ( ! defined( 'DTWC_ADMIN_URL' ) ) {
+	define( 'DTWC_ADMIN_URL', WP_PLUGIN_URL . '/' . DTWC_ADMIN_NAME );
 }
 
 /**
@@ -46,7 +46,7 @@ if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_URL' ) ) {
  *
  * @since 1.0.0
  */
-require_once Delivery_Times_For_WooCommerce_ADMIN_DIR . '/class-dtwc-admin-settings.php';
+require_once DTWC_ADMIN_DIR . '/class-dtwc-admin-settings.php';
 
 /**
  * Actions/Filters
@@ -208,6 +208,9 @@ if ( class_exists( 'Delivery_Times_For_WooCommerce_Admin_Settings' ) ) {
 			'saturday'  => esc_attr__( 'Saturday', 'delivery-times-for-woocommerce' ),
 		);
 
+		// Filter delivery days.
+		$delivery_days = apply_filters( 'dtwc_settings_delivery_days_options', $delivery_days );
+
 		// Field: Multicheck.
 		$dtwc_obj->add_field(
 			'dtwc_business',
@@ -216,7 +219,7 @@ if ( class_exists( 'Delivery_Times_For_WooCommerce_Admin_Settings' ) ) {
 				'type'    => 'multicheck',
 				'name'    => esc_attr__( 'Delivery Days', 'delivery-times-for-woocommerce' ),
 				'desc'    => esc_attr__( 'Select the days of the week that you are open for business', 'delivery-times-for-woocommerce' ),
-				'options' => apply_filters( 'dtwc_settings_delivery_days_options', $delivery_days ),
+				'options' => $delivery_days,
 			)
 		);
 
