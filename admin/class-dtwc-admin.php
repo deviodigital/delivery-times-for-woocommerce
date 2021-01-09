@@ -20,7 +20,7 @@
  * @subpackage DTWC/admin
  * @author     Devio Digital <contact@deviodigital.com>
  */
-class DTWC_Admin {
+class Delivery_Times_For_WooCommerce_Admin {
 
 	/**
 	 * The ID of this plugin.

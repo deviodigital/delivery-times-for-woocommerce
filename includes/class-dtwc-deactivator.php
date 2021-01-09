@@ -20,7 +20,7 @@
  * @subpackage DTWC/includes
  * @author     Devio Digital <contact@deviodigital.com>
  */
-class DTWC_Deactivator {
+class Delivery_Times_For_WooCommerce_Deactivator {
 
 	/**
 	 * Short Description. (use period)

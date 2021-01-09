@@ -20,17 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 // Plugin version.
-if ( ! defined( 'DTWC_ADMIN_VERSION' ) ) {
-	define( 'DTWC_ADMIN_VERSION', '1.1' );
+if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_VERSION' ) ) {
+	define( 'Delivery_Times_For_WooCommerce_ADMIN_VERSION', '1.1' );
 }
-if ( ! defined( 'DTWC_ADMIN_NAME' ) ) {
-	define( 'DTWC_ADMIN_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
+if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_NAME' ) ) {
+	define( 'Delivery_Times_For_WooCommerce_ADMIN_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
 }
-if ( ! defined( 'DTWC_ADMIN_DIR' ) ) {
-	define( 'DTWC_ADMIN_DIR', WP_PLUGIN_DIR . '/' . DTWC_ADMIN_NAME );
+if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_DIR' ) ) {
+	define( 'Delivery_Times_For_WooCommerce_ADMIN_DIR', WP_PLUGIN_DIR . '/' . Delivery_Times_For_WooCommerce_ADMIN_NAME );
 }
-if ( ! defined( 'DTWC_ADMIN_URL' ) ) {
-	define( 'DTWC_ADMIN_URL', WP_PLUGIN_URL . '/' . DTWC_ADMIN_NAME );
+if ( ! defined( 'Delivery_Times_For_WooCommerce_ADMIN_URL' ) ) {
+	define( 'Delivery_Times_For_WooCommerce_ADMIN_URL', WP_PLUGIN_URL . '/' . Delivery_Times_For_WooCommerce_ADMIN_NAME );
 }
 
 /**
@@ -46,7 +46,7 @@ if ( ! defined( 'DTWC_ADMIN_URL' ) ) {
  *
  * @since 1.0.0
  */
-require_once DTWC_ADMIN_DIR . '/class-dtwc-admin-settings.php';
+require_once Delivery_Times_For_WooCommerce_ADMIN_DIR . '/class-dtwc-admin-settings.php';
 
 /**
  * Actions/Filters
@@ -55,13 +55,13 @@ require_once DTWC_ADMIN_DIR . '/class-dtwc-admin-settings.php';
  *
  * @since  1.0.0
  */
-if ( class_exists( 'DTWC_ADMIN_SETTINGS' ) ) {
+if ( class_exists( 'Delivery_Times_For_WooCommerce_Admin_Settings' ) ) {
 	/**
 	 * Object Instantiation.
 	 *
-	 * Object for the class `DTWC_ADMIN_SETTINGS`.
+	 * Object for the class `Delivery_Times_For_WooCommerce_Admin_Settings`.
 	 */
-	$dtwc_obj = new DTWC_ADMIN_SETTINGS();
+	$dtwc_obj = new Delivery_Times_For_WooCommerce_Admin_Settings();
 
 	// Section: Basic Settings.
 	$dtwc_obj->add_section(

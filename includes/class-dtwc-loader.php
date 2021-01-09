@@ -21,7 +21,7 @@
  * @subpackage DTWC/includes
  * @author     Devio Digital <contact@deviodigital.com>
  */
-class DTWC_Loader {
+class Delivery_Times_For_WooCommerce_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

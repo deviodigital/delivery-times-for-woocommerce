@@ -36,7 +36,7 @@ define( 'DTWC_VERSION', '1.5' );
  */
 function activate_dtwc() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dtwc-activator.php';
-	DTWC_Activator::activate();
+	Delivery_Times_For_WooCommerce_Activator::activate();
 }
 
 /**
@@ -45,7 +45,7 @@ function activate_dtwc() {
  */
 function deactivate_dtwc() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dtwc-deactivator.php';
-	DTWC_Deactivator::deactivate();
+	Delivery_Times_For_WooCommerce_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_dtwc' );

@@ -20,7 +20,7 @@
  * @subpackage DTWC/public
  * @author     Devio Digital <contact@deviodigital.com>
  */
-class DTWC_Public {
+class Delivery_Times_For_WooCommerce_Public {
 
 	/**
 	 * The ID of this plugin.

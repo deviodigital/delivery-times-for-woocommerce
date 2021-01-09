@@ -24,7 +24,7 @@
  * @subpackage DTWC/includes
  * @author     Devio Digital <contact@deviodigital.com>
  */
-class DTWC_i18n {
+class Delivery_Times_For_WooCommerce_i18n {
 
 
 	/**
