@@ -3,7 +3,7 @@ Contributors: deviodigital
 Tags: delivery, delivery-times, courier, woocommerce, order-delivery
 Requires at least: 3.0.1
 Tested up to: 5.6
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,13 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 7. Delivery date & time added to WooCommerce admin Order details screen
 
 == Changelog ==
+
+= 1.6 =
+*   Added new Spanish translation in `languages/delivery-times-for-woocommerce-es_ES.pot`
+*   Added new French translation in `languages/delivery-times-for-woocommerce-fr_FR.pot`
+*   Added new Italian translation in `languages/delivery-times-for-woocommerce-it_IT.pot`
+*   Updated text strings for localization in `languages/delivery-times-for-woocommerce.pot`
+*   General code cleanup throughout multiple files
 
 = 1.5 =
 *   Added minDate value if prepDays is not 0 in `public/js/dtwc-public.js`
