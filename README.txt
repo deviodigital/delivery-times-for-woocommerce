@@ -63,6 +63,10 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 
 == Changelog ==
 
+= 1.6.1 =
+*   Updated admin settings class to load on `init` for translations to take effect in `admin/dtwc-admin-settings.php`
+*   General code cleanup throughout multiple files
+
 = 1.6 =
 *   Added new Spanish translation in `languages/delivery-times-for-woocommerce-es_ES.pot`
 *   Added new French translation in `languages/delivery-times-for-woocommerce-fr_FR.pot`
