@@ -737,7 +737,7 @@ if ( ! class_exists( 'DTWC_ADMIN_SETTINGS' ) ) :
 		public function plugin_page() {
 			echo '<div class="wrap">';
 			echo '<h1>' . __( 'Delivery Times for WooCommerce', 'delivery-times-for-woocommerce' ) . ' <span style="font-size:50%;">v' . DTWC_VERSION . '</span></h1>';
-			echo '<p>' . __( 'Brought to you by', 'delivery-times-for-woocommerce' ) . ' <a href="https://www.deviodigital.com/" target="_blank">Devio Digital</a> | <a href="https://www.deviodigital.com/documentation/" target="_blank">Documentation</a>';
+			echo '<p>' . __( 'Brought to you by', 'delivery-times-for-woocommerce' ) . ' <a href="https://www.deviodigital.com/" target="_blank">Devio Digital</a> | <a href="https://www.deviodigital.com/documentation/" target="_blank">' . __( 'Documentation', 'delivery-times-for-woocommerce' ) . '</a>';
 			$this->show_navigation();
 			$this->show_forms();
 			echo '</div>';
