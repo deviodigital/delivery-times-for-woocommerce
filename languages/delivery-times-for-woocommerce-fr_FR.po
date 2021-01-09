@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Delivery Times for WooCommerce\n"
-"POT-Creation-Date: 2021-01-08 18:21-0500\n"
-"PO-Revision-Date: 2021-01-08 18:21-0500\n"
+"POT-Creation-Date: 2021-01-09 10:06-0500\n"
+"PO-Revision-Date: 2021-01-09 10:06-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -32,7 +32,6 @@ msgstr "Choisir une image"
 #. Plugin Name of the plugin/theme
 #: admin/class-dtwc-admin-settings.php:729
 #: admin/class-dtwc-admin-settings.php:739
-#, fuzzy
 msgid "Delivery Times for WooCommerce"
 msgstr "Délais de livraison pour WooCommerce"
 
@@ -43,6 +42,10 @@ msgstr "Heures de livraison"
 #: admin/class-dtwc-admin-settings.php:740
 msgid "Brought to you by"
 msgstr "Vous est proposé par"
+
+#: admin/class-dtwc-admin-settings.php:740
+msgid "Documentation"
+msgstr "Documentation"
 
 #: admin/dtwc-admin-settings.php:70
 msgid "Basic Settings"
@@ -57,7 +60,6 @@ msgid "Advanced Settings"
 msgstr "Paramètres avancés"
 
 #: admin/dtwc-admin-settings.php:96
-#, fuzzy
 msgid "Delivery date label"
 msgstr "Étiquette de date de livraison"
 
@@ -72,7 +74,6 @@ msgid "Delivery date"
 msgstr "Date de livraison"
 
 #: admin/dtwc-admin-settings.php:108
-#, fuzzy
 msgid "Require delivery date"
 msgstr "Exiger la date de livraison"
 
@@ -115,7 +116,6 @@ msgstr ""
 "commande? (laissez vide pour aucune limite)"
 
 #: admin/dtwc-admin-settings.php:173
-#, fuzzy
 msgid "Delivery days prep"
 msgstr "Préparation des jours de livraison"
 
@@ -128,7 +128,6 @@ msgstr ""
 "vide pour permettre la livraison le jour même)"
 
 #: admin/dtwc-admin-settings.php:186
-#, fuzzy
 msgid "Delivery time prep"
 msgstr "Préparation du délai de livraison"
 
