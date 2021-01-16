@@ -8,16 +8,18 @@
  * @package           DTWC
  *
  * @wordpress-plugin
- * Plugin Name:       Delivery Times for WooCommerce
- * Plugin URI:        https://deviodigital.com/how-to-use-the-delivery-times-for-woocommerce-plugin/
- * Description:       Allow your customers to choose their desired delivery date and time during checkout with WooCommerce
- * Version:           1.6.1
- * Author:            Devio Digital
- * Author URI:        https://www.deviodigital.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       delivery-times-for-woocommerce
- * Domain Path:       /languages
+ * Plugin Name:          Delivery Times for WooCommerce
+ * Plugin URI:           https://deviodigital.com/how-to-use-the-delivery-times-for-woocommerce-plugin/
+ * Description:          Allow your customers to choose their desired delivery date and time during checkout with WooCommerce
+ * Version:              1.6.1
+ * Author:               Devio Digital
+ * Author URI:           https://www.deviodigital.com/
+ * License:              GPL-2.0+
+ * License URI:          http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:          delivery-times-for-woocommerce
+ * Domain Path:          /languages
+ * WC requires at least: 3.5.0
+ * WC tested up to:      4.9.0
  */
 
 // If this file is called directly, abort.
