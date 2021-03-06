@@ -145,13 +145,13 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
     }
 
     // Get the delivery date.
-    $delivery_date = get_post_meta( $order_id, 'dtwc_delivery_date', true );
+    $delivery_date_meta = get_post_meta( $order_id, 'dtwc_delivery_date', true );
 
     // Create readable delivery date.
-    $delivery_date = date( apply_filters( 'dtwc_date_format', get_option( 'date_format' ) ), strtotime( $delivery_date ) );
+    $delivery_date = date( apply_filters( 'dtwc_date_format', get_option( 'date_format' ) ), strtotime( $delivery_date_meta ) );
 
     // Display delivery date.
-    if ( '' != $delivery_date ) {
+    if ( '' != $delivery_date_meta ) {
         $fields[ dtwc_delivery_date_label() ] = array(
             'label' => dtwc_delivery_date_label(),
             'value' => $delivery_date,
@@ -159,13 +159,13 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
     }
 
     // Get the delivery time.
-    $delivery_time = get_post_meta( $order_id, 'dtwc_delivery_time', true );
+    $delivery_time_meta = get_post_meta( $order_id, 'dtwc_delivery_time', true );
 
     // Create readable delivery time.
-    $delivery_time = date( apply_filters( 'dtwc_time_format', get_option( 'time_format' ) ), strtotime( $delivery_time ) );
+    $delivery_time = date( apply_filters( 'dtwc_time_format', get_option( 'time_format' ) ), strtotime( $delivery_time_meta ) );
 
     // Display delivery time.
-    if ( '' != $delivery_time ) {
+    if ( '' != $delivery_time_meta ) {
         $fields[ dtwc_delivery_time_label() ] = array(
             'label' => dtwc_delivery_time_label(),
             'value' => $delivery_time,
