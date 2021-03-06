@@ -166,7 +166,7 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
 
     // Display delivery time.
     if ( '' != $delivery_time ) {
-        $fields[ 'Delivery time' ] = array(
+        $fields[ dtwc_delivery_time_label() ] = array(
             'label' => dtwc_delivery_time_label(),
             'value' => $delivery_time,
         );
