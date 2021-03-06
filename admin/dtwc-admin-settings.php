@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 // Plugin version.
 if ( ! defined( 'DTWC_ADMIN_VERSION' ) ) {
-	define( 'DTWC_ADMIN_VERSION', '1.1' );
+	define( 'DTWC_ADMIN_VERSION', '1.2' );
 }
 if ( ! defined( 'DTWC_ADMIN_NAME' ) ) {
 	define( 'DTWC_ADMIN_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
@@ -258,6 +258,22 @@ if ( class_exists( 'Delivery_Times_For_WooCommerce_Admin_Settings' ) ) {
 					'shipping' => esc_attr__( 'After the shipping address', 'delivery-times-for-woocommerce' )
 				),
 				'default' => 'shipping',
+			)
+		);
+		// Field: Delivery time checkout display.
+		$dtwc_obj->add_field(
+			'dtwc_advanced',
+			array(
+				'id'      => 'delivery_time_checkout_display',
+				'type'    => 'select',
+				'name'    => esc_attr__( 'Delivery time checkout placement', 'delivery-times-for-woocommerce' ),
+				'desc'    => esc_attr__( 'Choose where to display the delivery time on the checkout screen', 'delivery-times-for-woocommerce' ),
+				'options' => array(
+					'after_billing'  => esc_attr__( 'After the billing address', 'delivery-times-for-woocommerce' ),
+					'after_shipping' => esc_attr__( 'After the shipping address', 'delivery-times-for-woocommerce' ),
+					'after_notes'    => esc_attr__( 'After the order notes', 'delivery-times-for-woocommerce' )
+				),
+				'default' => 'after_billing',
 			)
 		);
 	}
