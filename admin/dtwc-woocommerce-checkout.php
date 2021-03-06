@@ -143,6 +143,14 @@ function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
         $order_id = $order->id;
     }
 
+    // Remove delivery time from emails.
+    $remove = dtwc_remove_delivery_time_from_emails();
+
+    // Bail early?
+    if ( 'on' == $remove ) {     
+        return $fields;
+    }
+
     // Get the delivery date.
     $delivery_date_meta = get_post_meta( $order_id, 'dtwc_delivery_date', true );
 
