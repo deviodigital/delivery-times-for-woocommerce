@@ -214,14 +214,32 @@ function dtwc_delivery_preorder_days() {
  * @return string|bool
  */
 function dtwc_delivery_time_edit_order_display() {
-    $business = get_option( 'dtwc_advanced' );
+    $advanced = get_option( 'dtwc_advanced' );
 
     // Turn off display (default).
     $display = FALSE;
 
-    if ( isset( $business['delivery_time_edit_order_display'] ) && '' !== $business['delivery_time_edit_order_display'] ) {
-        $display = $business['delivery_time_edit_order_display'];
+    if ( isset( $advanced['delivery_time_edit_order_display'] ) && '' !== $advanced['delivery_time_edit_order_display'] ) {
+        $display = $advanced['delivery_time_edit_order_display'];
     }
 
 	return apply_filters( 'dtwc_delivery_time_edit_order_display', $display );
+}
+
+/**
+ * Get the Delivery time placement for Checkout screen
+ *
+ * @return string|bool
+ */
+function dtwc_delivery_time_checkout_display() {
+    $advanced = get_option( 'dtwc_advanced' );
+
+    // Display (default).
+    $display = 'after_billing';
+
+    if ( isset( $advanced['delivery_time_checkout_display'] ) && '' !== $advanced['delivery_time_checkout_display'] ) {
+        $display = $advanced['delivery_time_checkout_display'];
+    }
+
+	return apply_filters( 'dtwc_delivery_time_checkout_display', $display );
 }
