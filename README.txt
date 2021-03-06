@@ -2,8 +2,8 @@
 Contributors: deviodigital
 Tags: delivery, delivery-times, courier, woocommerce, order-delivery
 Requires at least: 3.0.1
-Tested up to: 5.6
-Stable tag: 1.6.1
+Tested up to: 5.6.2
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,20 @@ Learn more at [Delivery Fees for WooCommerce](https://www.wordpress.org/plugins/
 7. Delivery date & time added to WooCommerce admin Order details screen
 
 == Changelog ==
+
+= 1.7 =
+*   Added delivery time checkout page placement setting in `admin/dtwc-admin-settings.php`
+*   Added a remove delivery time from customer email setting in `admin/dtwc-admin-settings.php`
+*   Added 'dtwc_delivery_time_checkout_display' helper function in `admin/dtwc-helper-functions.php`
+*   Added 'dtwc_remove_delivery_time_from_emails' helper function in `admin/dtwc-helper-functions.php`
+*   Updated checkout fields to use the new display placement setting in `admin/dtwc-woocommerce-checkout.php`
+*   Updated email fields to only get added if removal setting is `off` in `admin/dtwc-woocommerce-checkout.php`
+*   Updated delivery date/time checks before adding to email data in `admin/dtwc-woocommerce-checkout.php`
+*   Updated 'delivery time' email field to use label helper function in `admin/dtwc-woocommerce-checkout.php`
+*   Updated text strings for localization in `languages/delivery-times-for-woocommerce.pot`
+*   Updated text strings for localization in `languages/delivery-times-for-woocommerce-es_ES.pot`
+*   Updated text strings for localization in `languages/delivery-times-for-woocommerce-fr_FR.pot`
+*   Updated text strings for localization in `languages/delivery-times-for-woocommerce-it_IT.pot`
 
 = 1.6.1 =
 *   Updated admin settings class to load on `init` for translations to take effect in `admin/dtwc-admin-settings.php`
