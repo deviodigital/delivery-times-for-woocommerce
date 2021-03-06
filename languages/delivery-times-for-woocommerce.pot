@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Delivery Times for WooCommerce\n"
-"POT-Creation-Date: 2021-01-09 10:04-0500\n"
-"PO-Revision-Date: 2021-01-09 10:04-0500\n"
+"POT-Creation-Date: 2021-03-05 22:53-0500\n"
+"PO-Revision-Date: 2021-03-05 22:53-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -47,167 +47,187 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:70
+#: admin/dtwc-admin-settings.php:77
 msgid "Basic Settings"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:78
+#: admin/dtwc-admin-settings.php:85
 msgid "Business Hours"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:86
+#: admin/dtwc-admin-settings.php:93
 msgid "Advanced Settings"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:96
+#: admin/dtwc-admin-settings.php:103
 msgid "Delivery date label"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:97 admin/dtwc-admin-settings.php:129
+#: admin/dtwc-admin-settings.php:104 admin/dtwc-admin-settings.php:136
 msgid "The label displayed on checkout page and in order details"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:98 admin/dtwc-helper-functions.php:94
+#: admin/dtwc-admin-settings.php:105 admin/dtwc-helper-functions.php:94
 msgid "Delivery date"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:108
+#: admin/dtwc-admin-settings.php:115
 msgid "Require delivery date"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:109
+#: admin/dtwc-admin-settings.php:116
 msgid ""
 "Check this box to require customers select a delivery date during checkout"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:128
+#: admin/dtwc-admin-settings.php:135
 msgid "Delivery time label"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:130 admin/dtwc-helper-functions.php:130
+#: admin/dtwc-admin-settings.php:137 admin/dtwc-helper-functions.php:130
 msgid "Delivery time"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:140
+#: admin/dtwc-admin-settings.php:147
 msgid "Require delivery time"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:141
+#: admin/dtwc-admin-settings.php:148
 msgid ""
 "Check this box to require customers select a delivery time during checkout"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:160
+#: admin/dtwc-admin-settings.php:167
 msgid "Pre-order days"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:161
+#: admin/dtwc-admin-settings.php:168
 msgid ""
 "How many days ahead are customers allowed to place an order? (leave blank "
 "for no limit)"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:173
+#: admin/dtwc-admin-settings.php:180
 msgid "Delivery days prep"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:174
+#: admin/dtwc-admin-settings.php:181
 msgid ""
 "How many days notice do you require for delivery? (leave blank to allow same-"
 "day delivery)"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:186
+#: admin/dtwc-admin-settings.php:193
 msgid "Delivery time prep"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:187
+#: admin/dtwc-admin-settings.php:194
 msgid ""
 "How many hours notice do you require for delivery? (useful for same-day "
 "delivery)"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:195
+#: admin/dtwc-admin-settings.php:202
 msgid "Sunday"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:196
+#: admin/dtwc-admin-settings.php:203
 msgid "Monday"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:197
+#: admin/dtwc-admin-settings.php:204
 msgid "Tuesday"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:198
+#: admin/dtwc-admin-settings.php:205
 msgid "Wednesday"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:199
+#: admin/dtwc-admin-settings.php:206
 msgid "Thursday"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:200
+#: admin/dtwc-admin-settings.php:207
 msgid "Friday"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:201
+#: admin/dtwc-admin-settings.php:208
 msgid "Saturday"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:210
+#: admin/dtwc-admin-settings.php:220
 msgid "Delivery Days"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:211
+#: admin/dtwc-admin-settings.php:221
 msgid "Select the days of the week that you are open for business"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:222
+#: admin/dtwc-admin-settings.php:232
 msgid "Opening time"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:223
+#: admin/dtwc-admin-settings.php:233
 msgid "What time does your business start delivering orders?"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:233
+#: admin/dtwc-admin-settings.php:243
 msgid "Closing time"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:234
+#: admin/dtwc-admin-settings.php:244
 msgid "What time does your business stop delivering orders?"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:244
+#: admin/dtwc-admin-settings.php:254
 msgid "Delivery time admin placement"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:245
+#: admin/dtwc-admin-settings.php:255
 msgid "Choose where to display the delivery time on the Edit Order screen"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:247
+#: admin/dtwc-admin-settings.php:257 admin/dtwc-admin-settings.php:272
 msgid "After the billing address"
 msgstr ""
 
-#: admin/dtwc-admin-settings.php:248
+#: admin/dtwc-admin-settings.php:258 admin/dtwc-admin-settings.php:273
 msgid "After the shipping address"
+msgstr ""
+
+#: admin/dtwc-admin-settings.php:269
+msgid "Delivery time checkout placement"
+msgstr ""
+
+#: admin/dtwc-admin-settings.php:270
+msgid "Choose where to display the delivery time on the checkout screen"
+msgstr ""
+
+#: admin/dtwc-admin-settings.php:274
+msgid "After the order notes"
+msgstr ""
+
+#: admin/dtwc-admin-settings.php:285
+msgid "Remove delivery time from customer emails"
+msgstr ""
+
+#: admin/dtwc-admin-settings.php:286
+msgid "Check this box to remove the delivery date and time from emails"
 msgstr ""
 
 #: admin/dtwc-woocommerce-checkout.php:31
 msgid "Select a desired time for delivery"
 msgstr ""
 
-#: admin/dtwc-woocommerce-checkout.php:102
+#: admin/dtwc-woocommerce-checkout.php:101
 msgid "Please select a delivery date."
 msgstr ""
 
-#: admin/dtwc-woocommerce-checkout.php:110
+#: admin/dtwc-woocommerce-checkout.php:109
 msgid "Please select a delivery time."
 msgstr ""
 
-#: delivery-times-for-woocommerce.php:85
+#: delivery-times-for-woocommerce.php:87
 msgid "Settings"
 msgstr ""
 
