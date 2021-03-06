@@ -45,11 +45,30 @@ function dtwc_woocommerce_admin_order_data_after_address( $order ) {
  * @return void
  */
 function dtwc_woocommerce_init() {
+    // Edit Order display setting.
     $after_address = dtwc_delivery_time_edit_order_display();
+
+    // Edit Order screen display placement.
     if ( 'billing' == $after_address ) {
         add_action( 'woocommerce_admin_order_data_after_billing_address', 'dtwc_woocommerce_admin_order_data_after_address', 10, 1 );
     } else {
         add_action( 'woocommerce_admin_order_data_after_shipping_address', 'dtwc_woocommerce_admin_order_data_after_address', 10, 1 );
+    }
+
+    // Checkout display setting.
+    $checkout_display = dtwc_delivery_time_checkout_display();
+
+    // Display after billing.
+    if ( 'after_billing' == $checkout_display ) {
+        add_action( 'woocommerce_after_checkout_billing_form', 'dtwc_delivery_info_checkout_fields' , 10, 1 );
+    }
+    // Display after shipping.
+    if ( 'after_shipping' == $checkout_display ) {
+        add_action( 'woocommerce_after_checkout_shipping_form', 'dtwc_delivery_info_checkout_fields' , 10, 1 );
+    }
+    // Display after notes.
+    if ( 'after_notes' == $checkout_display ) {
+        add_action( 'woocommerce_after_order_notes', 'dtwc_delivery_info_checkout_fields' , 10, 1 );
     }
 }
 add_action( 'woocommerce_init', 'dtwc_woocommerce_init' );

@@ -89,7 +89,6 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     ), $checkout->get_value( 'dtwc_delivery_time' ) );
 
 }
-add_action( 'woocommerce_after_checkout_billing_form', 'dtwc_delivery_info_checkout_fields' , 10, 1 );
 
 /**
  * Process the Delivery Date & Time checkout fields
