@@ -276,6 +276,16 @@ if ( class_exists( 'Delivery_Times_For_WooCommerce_Admin_Settings' ) ) {
 				'default' => 'after_billing',
 			)
 		);
+		// Field: Remove delivery time from emails.
+		$dtwc_obj->add_field(
+			'dtwc_advanced',
+			array(
+				'id'   => 'remove_delivery_time_from_emails',
+				'type' => 'checkbox',
+				'name' => esc_attr__( 'Remove delivery time from customer emails', 'delivery-times-for-woocommerce' ),
+				'desc' => esc_attr__( 'Check this box to remove the delivery date and time from emails', 'delivery-times-for-woocommerce' ),
+			)
+		);
 	}
 	add_action( 'init', 'dtwc_load_admin_settings' );
 }
