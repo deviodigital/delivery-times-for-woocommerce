@@ -243,3 +243,21 @@ function dtwc_delivery_time_checkout_display() {
 
 	return apply_filters( 'dtwc_delivery_time_checkout_display', $display );
 }
+
+/**
+ * Get the remove delivery time option added in the DTWC admin settings
+ *
+ * @return string|bool
+ */
+function dtwc_remove_delivery_time_from_emails() {
+    $advanced = get_option( 'dtwc_advanced' );
+
+    // Turn off delivery time requirement.
+    $remove = 'off';
+
+    if ( isset( $advanced['remove_delivery_time_from_emails'] ) && '' !== $advanced['remove_delivery_time_from_emails'] ) {
+        $remove = $advanced['remove_delivery_time_from_emails'];
+    }
+
+	return apply_filters( 'dtwc_remove_delivery_time_from_emails', $remove );
+}
