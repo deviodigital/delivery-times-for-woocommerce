@@ -63,9 +63,9 @@ class Delivery_Times_For_WooCommerce_Public {
 
 		if ( is_checkout() ) {
 			// jQuery UI stylesheet.
-			wp_enqueue_style( $this->plugin_name . '-jquery-ui', plugin_dir_url( __FILE__ ) . 'css/jquery-ui.css', array(), $this->version, 'all' );
+			wp_enqueue_style( $this->plugin_name . '-jquery-ui', plugin_dir_url( __FILE__ ) . 'css/jquery-ui.min.css', array(), $this->version, 'all' );
 		}
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dtwc-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dtwc-public.min.css', array(), $this->version, 'all' );
 
 	}
 

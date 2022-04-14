@@ -58,7 +58,7 @@ jQuery(document).ready(function( $ ) {
 			var hh = Math.floor(tt/60);
 			var mm = (tt%60);
 			// Time added to array.
-			times[i] = ('0' + (hh % 12)).slice(-2) + ':' + ('0' + mm).slice(-2);
+			times[i] = ("0" + (hh % 12)).slice(-2) + ":" + ("0" + mm).slice(-2);
 			// Add 30 minutes to time.
 			tt = tt + x;
 		}
