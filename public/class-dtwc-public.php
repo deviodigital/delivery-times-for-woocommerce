@@ -146,7 +146,7 @@ class Delivery_Times_For_WooCommerce_Public {
 				$delivery_time = strtotime( '+30 minutes', $delivery_time );
 			}
 
-			// Encode the times for JavaScript usage.
+			// Encode and then decode the times for JavaScript usage.
 			$times = json_encode( $times );
 			$times = json_decode( $times );
 
@@ -164,7 +164,7 @@ class Delivery_Times_For_WooCommerce_Public {
 				'prepTime'      => $prep_time,
 				'firstDay'      => get_option( 'start_of_week' )
 			);
-			wp_localize_script( $this->plugin_name, 'dtwc_settings', $translation_array );
+			wp_localize_script( $this->plugin_name, 'dtwcSettings', $translation_array );
 		}
 
 	}
