@@ -2,16 +2,16 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://www.deviodigital.com/
- * @since      1.2
- *
  * @package    DTWC
  * @subpackage DTWC/admin
+ * @author     Devio Digital <contact@deviodigital.com>
+ * @license    GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://www.deviodigital.com
  */
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	wp_die();
+    wp_die();
 }
 
 /**
@@ -20,7 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Adds delivery date details to the Driver Dashboard order details
  * table below the order date.
  *
- * @since 1.2
+ * @since  1.2
+ * @return string
  */
 function dtwc_driver_dashboard_order_details_table_tbody_bottom() {
     // Order ID.

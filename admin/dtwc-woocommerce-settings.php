@@ -3,15 +3,20 @@
 /**
  * The WooCommerce settings
  *
- * @link       https://www.deviodigital.com/
- * @since      1.2
- *
  * @package    DTWC
  * @subpackage DTWC/admin
+ * @author     Devio Digital <contact@deviodigital.com>
+ * @license    GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://www.deviodigital.com
+ * @since      1.2.0
  */
 
 /**
  * Add delivery time to admin order data
+ * 
+ * @param object $order 
+ * 
+ * @return string
  */
 function dtwc_woocommerce_admin_order_data_after_address( $order ) {
     // Order ID.
@@ -41,7 +46,7 @@ function dtwc_woocommerce_admin_order_data_after_address( $order ) {
 /**
  * Run specific codes on WooCommerce init
  *
- * @since 1.2
+ * @since  1.2
  * @return void
  */
 function dtwc_woocommerce_init() {

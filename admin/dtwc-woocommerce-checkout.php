@@ -3,17 +3,20 @@
 /**
  * The WooCommerce checkout fields
  *
- * @link       https://www.deviodigital.com/
- * @since      1.0
- *
  * @package    DTWC
  * @subpackage DTWC/admin
+ * @author     Devio Digital <contact@deviodigital.com>
+ * @license    GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://www.deviodigital.com
  */
 
 /**
  * Add Delivery Date & Time checkout fields
  *
- * @since 1.0
+ * @param [type] $checkout
+ * 
+ * @since  1.0
+ * @return string
  */
 function dtwc_delivery_info_checkout_fields( $checkout ) {
 
@@ -31,7 +34,7 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
     $times = array( '' => apply_filters( 'dtwc_checkout_delivery_times_select_default_text', __( 'Select a desired time for delivery', 'delivery-times-for-woocommerce' ) ) );
 
     // Loop through and add delivery times based on open/close times.
-    while( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
+    while ( $delivery_time <= $close_time && $delivery_time >= $open_time ) {
 
         // Delivery prep time.
         $delivery_prep = dtwc_delivery_prep_time();
@@ -93,7 +96,8 @@ function dtwc_delivery_info_checkout_fields( $checkout ) {
 /**
  * Process the Delivery Date & Time checkout fields
  *
- * @since 1.0
+ * @since  1.0
+ * @return void
  */
 function dtwc_delivery_date_checkout_field_process() {
 
@@ -118,22 +122,30 @@ add_action( 'woocommerce_checkout_process', 'dtwc_delivery_date_checkout_field_p
 /**
  * Save Delivery Date & Time checkout fields
  *
- * @since 1.0
+ * @param int $order_id 
+ * 
+ * @since  1.0
+ * @return void
  */
 function dtwc_add_order_delivery_info_to_order ( $order_id ) {
-	if ( null !== filter_input( INPUT_POST, 'dtwc_delivery_date' ) && '' != filter_input( INPUT_POST, 'dtwc_delivery_date' ) ) {
-		add_post_meta( $order_id, 'dtwc_delivery_date',  sanitize_text_field( filter_input( INPUT_POST, 'dtwc_delivery_date' ) ) );
-	}
-	if ( null !== filter_input( INPUT_POST, 'dtwc_delivery_time' ) && '' != filter_input( INPUT_POST, 'dtwc_delivery_time' ) ) {
-		add_post_meta( $order_id, 'dtwc_delivery_time',  sanitize_text_field( filter_input( INPUT_POST, 'dtwc_delivery_time' ) ) );
-	}
+    if ( null !== filter_input( INPUT_POST, 'dtwc_delivery_date' ) && '' != filter_input( INPUT_POST, 'dtwc_delivery_date' ) ) {
+        add_post_meta( $order_id, 'dtwc_delivery_date',  sanitize_text_field( filter_input( INPUT_POST, 'dtwc_delivery_date' ) ) );
+    }
+    if ( null !== filter_input( INPUT_POST, 'dtwc_delivery_time' ) && '' != filter_input( INPUT_POST, 'dtwc_delivery_time' ) ) {
+        add_post_meta( $order_id, 'dtwc_delivery_time',  sanitize_text_field( filter_input( INPUT_POST, 'dtwc_delivery_time' ) ) );
+    }
 }
 add_action( 'woocommerce_checkout_update_order_meta', 'dtwc_add_order_delivery_info_to_order' , 10, 1 );
 
 /**
  * Add Delivery Date & Time checkout fields to WooCommerce emails.
  *
- * @since 1.0
+ * @param [type] $fields 
+ * @param [type] $sent_to_admin 
+ * @param [type] $order 
+ * 
+ * @since  1.0
+ * @return array
  */
 function dtwc_add_delivery_info_to_emails( $fields, $sent_to_admin, $order ) {
     // Get the Order ID.
@@ -186,11 +198,14 @@ add_filter( 'woocommerce_email_order_meta_fields', 'dtwc_add_delivery_info_to_em
 /**
  * Add Delivery Date & Time checkout fields to WooCommerce thank you page.
  *
- * @since 1.0
+ * @param object $order 
+ * 
+ * @since  1.0
+ * @return void
  */
 function dtwc_add_delivery_info_to_order_received_page( $order ) {
     // Get the Order ID.
-	if ( version_compare( get_option( 'woocommerce_version' ), '3.0.0', ">=" ) ) {
+    if ( version_compare( get_option( 'woocommerce_version' ), '3.0.0', ">=" ) ) {
         $order_id = $order->get_id();
     } else {
         $order_id = $order->id;
@@ -218,6 +233,6 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
         echo apply_filters( 'dtwc_order_received_delivery_details', $delivery_details );
 
         echo do_action( 'dtwc_order_received_delivery_details_after' );
-	}
+    }
 }
 add_action( 'woocommerce_order_details_after_order_table_items', 'dtwc_add_delivery_info_to_order_received_page', 10 , 1 );

@@ -3,9 +3,10 @@
 /**
  * The plugin bootstrap file
  *
- * @link              https://www.deviodigital.com/
- * @since             1.0
- * @package           DTWC
+ * @package DTWC
+ * @author  Devio Digital <contact@deviodigital.com>
+ * @license GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link    https://www.deviodigital.com
  *
  * @wordpress-plugin
  * Plugin Name:          Delivery Times for WooCommerce
@@ -24,7 +25,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	wp_die();
+    wp_die();
 }
 
 /**
@@ -35,19 +36,23 @@ define( 'DTWC_VERSION', '1.8.0' );
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-dtwc-activator.php
+ * 
+ * @return void
  */
 function activate_dtwc() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dtwc-activator.php';
-	Delivery_Times_For_WooCommerce_Activator::activate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-dtwc-activator.php';
+    Delivery_Times_For_WooCommerce_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-dtwc-deactivator.php
+ * 
+ * @return void
  */
 function deactivate_dtwc() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dtwc-deactivator.php';
-	Delivery_Times_For_WooCommerce_Deactivator::deactivate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-dtwc-deactivator.php';
+    Delivery_Times_For_WooCommerce_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_dtwc' );
@@ -66,12 +71,13 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-dtwc.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0
+ * @since  1.0
+ * @return void
  */
 function run_dtwc() {
 
-	$plugin = new DTWC();
-	$plugin->run();
+    $plugin = new DTWC();
+    $plugin->run();
 
 }
 run_dtwc();
@@ -79,14 +85,15 @@ run_dtwc();
 /**
  * Add settings link on plugin page
  *
- * @since 1.0.3
- * @param array $links an array of links related to the plugin.
+ * @param array $links - an array of links related to the plugin.
+ * 
+ * @since  1.0.3
  * @return array updatead array of links related to the plugin.
  */
 function dtwc_settings_link( $links ) {
-	$settings_link = '<a href="admin.php?page=dtwc_settings">' . esc_attr__( 'Settings', 'delivery-times-for-woocommerce' ) . '</a>';
-	array_unshift( $links, $settings_link );
-	return $links;
+    $settings_link = '<a href="admin.php?page=dtwc_settings">' . esc_attr__( 'Settings', 'delivery-times-for-woocommerce' ) . '</a>';
+    array_unshift( $links, $settings_link );
+    return $links;
 }
 
 $pluginname = plugin_basename( __FILE__ );
@@ -95,23 +102,27 @@ add_filter( "plugin_action_links_$pluginname", 'dtwc_settings_link' );
 
 /**
  * Add a check for our plugin before redirecting
+ * 
+ * @return void
  */
 function dtwc_activate() {
-  add_option( 'dtwc_do_activation_redirect', true );
+    add_option( 'dtwc_do_activation_redirect', true );
 }
 register_activation_hook( __FILE__, 'dtwc_activate' );
 
 /**
- * Redirect to the Delivery Times for WooCommerce Settings page on single plugin activation
+ * Redirect to the Delivery Times for WooCommerce Settings page 
+ * on single plugin activation
  *
- * @since 1.0
+ * @since  1.0
+ * @return void
  */
 function dtwc_redirect() {
-	if ( get_option( 'dtwc_do_activation_redirect', false ) ) {
-			delete_option( 'dtwc_do_activation_redirect' );
-			if ( null === filter_input( INPUT_POST, 'activate-multi' ) ) {
-					wp_safe_redirect( 'admin.php?page=dtwc_settings' );
-			}
-	}
+    if ( get_option( 'dtwc_do_activation_redirect', false ) ) {
+        delete_option( 'dtwc_do_activation_redirect' );
+        if ( null === filter_input( INPUT_POST, 'activate-multi' ) ) {
+            wp_safe_redirect( 'admin.php?page=dtwc_settings' );
+        }
+    }
 }
 add_action( 'admin_init', 'dtwc_redirect' );

@@ -2,16 +2,16 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://www.deviodigital.com/
- * @since      1.0
- *
  * @package    DTWC
  * @subpackage DTWC/admin
+ * @author     Devio Digital <contact@deviodigital.com>
+ * @license    GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://www.deviodigital.com
  */
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	wp_die();
+    wp_die();
 }
 
 /**
@@ -28,7 +28,7 @@ function dtwc_business_delivery_time_format() {
         $time_format = $business['delivery_time_format'];
     }
 
-	return apply_filters( 'dtwc_business_delivery_time_format', $time_format );
+    return apply_filters( 'dtwc_business_delivery_time_format', $time_format );
 }
 
 /**
@@ -45,7 +45,7 @@ function dtwc_business_delivery_days() {
         $delivery_days = $business['delivery_days'];
     }
 
-	return apply_filters( 'dtwc_business_delivery_days', $delivery_days );
+    return apply_filters( 'dtwc_business_delivery_days', $delivery_days );
 }
 
 /**
@@ -62,7 +62,7 @@ function dtwc_business_opening_time() {
         $opening_time = $business['opening_time'];
     }
 
-	return apply_filters( 'dtwc_business_opening_time', $opening_time );
+    return apply_filters( 'dtwc_business_opening_time', $opening_time );
 }
 
 /**
@@ -79,7 +79,7 @@ function dtwc_business_closing_time() {
         $closing_time = $business['closing_time'];
     }
 
-	return apply_filters( 'dtwc_business_closing_time', $closing_time );
+    return apply_filters( 'dtwc_business_closing_time', $closing_time );
 }
 
 /**
@@ -97,7 +97,7 @@ function dtwc_delivery_date_label() {
         $date_label = $basic['delivery_date_label'];
     }
 
-	return apply_filters( 'dtwc_delivery_date_label', $date_label );
+    return apply_filters( 'dtwc_delivery_date_label', $date_label );
 }
 
 /**
@@ -115,7 +115,7 @@ function dtwc_require_delivery_date() {
         $require_date = $basic['require_delivery_date'];
     }
 
-	return apply_filters( 'dtwc_require_delivery_date', $require_date );
+    return apply_filters( 'dtwc_require_delivery_date', $require_date );
 }
 
 /**
@@ -133,7 +133,7 @@ function dtwc_delivery_time_label() {
         $time_label = $basic['delivery_time_label'];
     }
 
-	return apply_filters( 'dtwc_delivery_time_label', $time_label );
+    return apply_filters( 'dtwc_delivery_time_label', $time_label );
 }
 
 /**
@@ -151,7 +151,7 @@ function dtwc_require_delivery_time() {
         $require_time = $basic['require_delivery_time'];
     }
 
-	return apply_filters( 'dtwc_require_delivery_time', $require_time );
+    return apply_filters( 'dtwc_require_delivery_time', $require_time );
 }
 
 /**
@@ -169,7 +169,7 @@ function dtwc_delivery_prep_days() {
         $prep_days = $basic['prep_days'];
     }
 
-	return apply_filters( 'dtwc_delivery_prep_days', $prep_days );
+    return apply_filters( 'dtwc_delivery_prep_days', $prep_days );
 }
 
 /**
@@ -187,7 +187,7 @@ function dtwc_delivery_prep_time() {
         $prep_time = $basic['prep_time'];
     }
 
-	return apply_filters( 'dtwc_delivery_prep_time', $prep_time );
+    return apply_filters( 'dtwc_delivery_prep_time', $prep_time );
 }
 
 /**
@@ -205,7 +205,7 @@ function dtwc_delivery_preorder_days() {
         $preorder_days = $basic['preorder_days'];
     }
 
-	return apply_filters( 'dtwc_delivery_preorder_days', $preorder_days );
+    return apply_filters( 'dtwc_delivery_preorder_days', $preorder_days );
 }
 
 /**
@@ -223,7 +223,7 @@ function dtwc_delivery_time_edit_order_display() {
         $display = $advanced['delivery_time_edit_order_display'];
     }
 
-	return apply_filters( 'dtwc_delivery_time_edit_order_display', $display );
+    return apply_filters( 'dtwc_delivery_time_edit_order_display', $display );
 }
 
 /**
@@ -241,7 +241,7 @@ function dtwc_delivery_time_checkout_display() {
         $display = $advanced['delivery_time_checkout_display'];
     }
 
-	return apply_filters( 'dtwc_delivery_time_checkout_display', $display );
+    return apply_filters( 'dtwc_delivery_time_checkout_display', $display );
 }
 
 /**
@@ -259,5 +259,5 @@ function dtwc_remove_delivery_time_from_emails() {
         $remove = $advanced['remove_delivery_time_from_emails'];
     }
 
-	return apply_filters( 'dtwc_remove_delivery_time_from_emails', $remove );
+    return apply_filters( 'dtwc_remove_delivery_time_from_emails', $remove );
 }
