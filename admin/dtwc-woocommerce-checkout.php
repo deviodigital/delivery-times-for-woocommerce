@@ -226,6 +226,9 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
     // Create readable delivery time.
     $delivery_time = date( apply_filters( 'dtwc_time_format', get_option( 'time_format' ) ), strtotime( $delivery_time_meta ) );
 
+    // Make the delivery time filterable;
+    $delivery_time = apply_filters( 'dtwc_order_details_delivery_time', $delivery_time );
+
     // Display the delivery details.
     if ( '' != $delivery_date_meta ) {
         echo do_action( 'dtwc_order_received_delivery_details_before' );
