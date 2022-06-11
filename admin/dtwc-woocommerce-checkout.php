@@ -218,7 +218,7 @@ function dtwc_add_delivery_info_to_order_received_page( $order ) {
     $delivery_date = date( apply_filters( 'dtwc_date_format', get_option( 'date_format' ) ), strtotime( $delivery_date_meta ) );
 
     // Make the delivery date filterable.
-    $delivery_date = apply_filters( 'dtwc_delivery_date_order_details', $delivery_date );
+    $delivery_date = apply_filters( 'dtwc_order_details_delivery_date', $delivery_date );
 
     // Get the delivery time.
     $delivery_time_meta = get_post_meta( $order_id, 'dtwc_delivery_time', true );
